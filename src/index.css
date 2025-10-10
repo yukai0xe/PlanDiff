@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #ffffff;
+  --black: rgb(23, 23, 23);
+  --black-2: #130329;
+  --white-2: #b3b0b1;
+
+  --main-color1: #A5402D;
+  --main-color2: rgb(255, 208, 123);
+  --main-color3: #FDB833;
+  --main-color3-light: rgb(253, 184, 51, 0.5);
+  --main-color4: #296EB4;
+  --main-color5: #1789FC;
+
+  --secondary-color: #F49639;
+  --secondary-color-dark: #d28232;
+  --secondary-color-light: #f3a252;
+  --background: rgba(255, 208, 123, 0.5);
+  --foreground: var(--main-color1);
+  --tertiary-color: #b6422d;
+  --success-color: #4ade80;
+  --error-color: #ef4444;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow-y: overlay;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.8) rgba(255, 255, 255, 0.1);
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@font-face {
+  font-family: 'LXGWWenKaiTC-Bold';
+  src: url('../fonts/LXGWWenKaiTC-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--black);
+  background: var(--background);
+  font-family: 'LXGWWenKaiTC-Bold', Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.select-text {
+  user-select: text;
+}
+
+footer {
+  color: var(--main-color);
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
