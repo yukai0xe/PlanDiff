@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "plan-diff": {
+      "development": {
+        "fallback": "plan-diff.vercel.app"
+      }
+    }
+  }
+}
