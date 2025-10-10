@@ -1,12 +1,13 @@
 import RouteInfoDialog from "@/components/RouteInfoDialog";
 import FunctionalDialog from "@/components/FunctionalDialog";
 import TabsSelector from "@/components/TabsSelector";
+import Selector from "@/components/Selector";
 import RouteTable from "@/components/Table";
 import { numberToChinese } from "@/lib/utility";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRouteStore } from "@/store/routeStore";
-import { emptyDateRoute } from "@/data/routeData";
+import { emptyDateRoute, routeDataMapping } from "@/data/routeData";
 import { v7 as uuidv7 } from "uuid";
 import dayjs from "dayjs";
 
@@ -16,6 +17,7 @@ const RoutePlanPage = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -113,6 +115,15 @@ const RoutePlanPage = () => {
     if (activeTab >= newData.length) setActiveTab(newData.length - 1);
   }
 
+  const loadExampleData = (route: string) => {
+    const load = async (key: string) => {
+      const module = await import(`../data/${key}.json`);
+      return module?.default ?? module;
+    }
+    load(routeDataMapping[route])
+      .then(data => setRoutes(data))
+  }
+
   useEffect(() => {
     if (routes.length > 0) {
       const newTabs = ["預計行程"];
@@ -171,13 +182,14 @@ const RoutePlanPage = () => {
               + 新增參考行程
             </button>
           </div>
-            <div className="flex gap-x-2 items-center">
-                <button
-                    className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
-                    onClick={() => navigate("/compare")}
-                >
-                    行程比較
-                </button>
+          <div className="flex gap-x-2 items-center">
+            <Selector tabs={Object.keys(routeDataMapping)} label={"載入範例行程"} onChange={loadExampleData} />
+            <button
+                className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
+                onClick={() => navigate("/compare")}
+            >
+                行程比較
+            </button>
             {activeTab !== 0 && (
               <button
                 className="px-4 py-2 rounded bg-red-500 text-gray-50 hover:bg-red-600 transition"
@@ -195,14 +207,15 @@ const RoutePlanPage = () => {
             {activeTab !== 0 && (
               <>
                 <li>天氣：{routes[activeTab].weather}</li>
-                <li>資料來源：{routes[activeTab].source}</li>
+                <li>資料來源：<a className="inline-block text-blue-600 underline hover:text-blue-800"
+                  href={routes[activeTab].source}>{routes[activeTab].source}</a></li>
               </>
             )}
           </ul>
         )}
 
         <div className="text-xs text-gray-500">
-          提示：每份行程要比較的紀錄點要盡量相同，不然無法成功比較
+          提示：每份行程要比較的紀錄點要盡量相同，不然無法成功比較（ex: 道路交界處統一是岔路口或登山口）
         </div>
 
         {/* 表格內容 */}

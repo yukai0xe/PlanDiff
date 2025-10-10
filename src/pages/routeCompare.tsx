@@ -297,6 +297,18 @@ const RouteComparePage = () => {
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr className="hover:bg-gray-200">
+                                    <td className="px-4 py-2 border text-lg w-[300px]">人數</td>
+                                    {data.map((route, routeIdx) => (
+                                        <td key={routeIdx} className="px-4 py-2 border text-lg w-[300px]">{route.teamSize}</td>
+                                    ))}
+                                </tr>
+                                <tr className="hover:bg-gray-200">
+                                    <td className="px-4 py-2 border text-lg w-[300px]">天氣</td>
+                                    {data.map((route, routeIdx) => (
+                                        <td key={routeIdx} className="px-4 py-2 border text-lg w-[300px]">{route.weather}</td>
+                                    ))}
+                                </tr>
                                 {dayTablesData[activeTab].dayPoints.map((row, rowIdx) => (
                                     <React.Fragment key={rowIdx}>
                                         <tr key={row.point} className="hover:bg-gray-200">
@@ -306,7 +318,7 @@ const RouteComparePage = () => {
                                             {row.routes.map((route, routeIdx) => (
                                                 <td
                                                     data-type="content"
-                                                    key={route?.id ?? routeIdx}
+                                                    key={`${routeIdx}-${rowIdx}`}
                                                     className={`px-4 py-2 cursor-pointer w-[250px] relative ${route &&
                                                             isEditing(route.routeId, route.id) &&
                                                             !editing?.isDuration
@@ -342,7 +354,7 @@ const RouteComparePage = () => {
                                                                             : ""
                                                                         }`}
                                                                 >
-                                                                    {checkFirstPoint(route.id, routeIdx, route.date) ? route.depart : route.arrive}{" "}
+                                                                    {checkFirstPoint(route.id, routeIdx, route.date) || rowIdx === 0 ? route.depart : route.arrive}{" "}
                                                                     {rowIdx !== 0 &&
                                                                         route.rest > 0 &&
                                                                         `(休 ${route.rest}')`}{" "}

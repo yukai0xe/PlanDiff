@@ -6,10 +6,10 @@ import stringSimilarity from "string-similarity";
 
 function normalizeName(name: string): string {
     return name
-        .trim()
-        .replace(/\s+/g, "")
+        .replace(/\p{White_Space}+/gu, "")
         .replace(/[（）()]/g, "")
         .replace(/-/g, "")
+        .replace(/\p{N}+/gu, "")
         .toLowerCase();
 }
 
@@ -17,7 +17,7 @@ function isSamePoint(a: string, b: string): boolean {
     const normalizedA = normalizeName(a);
     const normalizedB = normalizeName(b);
     const similarity = stringSimilarity.compareTwoStrings(normalizedA, normalizedB);
-    return similarity > 0.8;
+    return similarity >= 0.9;
 }
 
 type RouteStore = {
@@ -73,7 +73,6 @@ export const useRouteStore = create<RouteStore>((set, get) => ({
         set({ routesCompare: [] });
     },
     handleRouteCompareChange: () => {
-        console.log("handleRouteCompareChange");
         const data = get().routes;
         const routeIdxs = Array.from({ length: data.length }, () => 0);
         const previousRouteIdxs = Array.from({ length: data.length }, () => 0);
@@ -86,8 +85,8 @@ export const useRouteStore = create<RouteStore>((set, get) => ({
                         const currentRecord = Object.entries(route.days).flatMap(
                             ([date, items]) => items.map((item) => ({ date, ...item }))
                         );
-                        while (routeIdxs[idx] < currentRecord.length) {
-                            if (isSamePoint(currentRecord[routeIdxs[idx]].point,target.point)) {
+                        while (routeIdxs[idx] < currentRecord.length && routeIdxs[idx] - previousRouteIdxs[idx] < 3) {
+                            if (isSamePoint(currentRecord[routeIdxs[idx]].point, target.point)) {
                                 previousRouteIdxs[idx] = routeIdxs[idx] + 1;
                                 return {
                                     routeId: route.id,
@@ -96,7 +95,13 @@ export const useRouteStore = create<RouteStore>((set, get) => ({
                             }
                             routeIdxs[idx]++;
                         }
-                        if (routeIdxs[idx] == currentRecord.length) routeIdxs[idx] = previousRouteIdxs[idx];
+                        routeIdxs[idx] = previousRouteIdxs[idx];
+                        if (routeIdxs[idx] - 1 > 0 && isSamePoint(currentRecord[routeIdxs[idx] - 1].point, target.point)) {
+                            return {
+                                routeId: route.id,
+                                ...currentRecord[routeIdxs[idx] - 1],
+                            };
+                        }
                         return null;
                     }),
                 })),

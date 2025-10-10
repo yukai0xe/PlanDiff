@@ -1,6 +1,10 @@
 import dayjs from "dayjs";
 import { v7 as uuidv7 } from "uuid";
 
+export const routeDataMapping: Record<string, string> = {
+  "南湖大山四天三夜": "route1"
+}
+
 export const emptyDateRoute: RecordPoint[] = [
   {
     id: uuidv7(),
