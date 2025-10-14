@@ -8,7 +8,7 @@ interface TabsSelectorProps {
 
 const TabsSelector = ({tabs, activeTab, setActiveTab}: TabsSelectorProps) => {
     return (
-        <>
+        <div className='flex gap-x-2'>
             {tabs.length < 5 ? (
                 tabs.map((tab, idx) => (
                     <button
@@ -47,7 +47,7 @@ const TabsSelector = ({tabs, activeTab, setActiveTab}: TabsSelectorProps) => {
                     </div>
                 </Listbox>
             )}
-        </>
+        </div>
     )
 }
 

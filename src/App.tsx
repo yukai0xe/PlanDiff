@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RouteComparePage from "./pages/routeCompare";
 import RouteOverviewPage from "./pages/routeOverview";
+import RouteMappingPage from "./pages/routeMapping";
+
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
 
@@ -22,6 +24,7 @@ function App() {
       <main className="p-6">
         <Routes>
           <Route path="/" element={<RouteOverviewPage />} />
+          <Route path="/mapping" element={<RouteMappingPage/>} />
           <Route path="/compare" element={<RouteComparePage />} />
         </Routes>
       </main>

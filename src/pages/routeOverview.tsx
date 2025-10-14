@@ -185,10 +185,10 @@ const RoutePlanPage = () => {
           <div className="flex gap-x-2 items-center">
             <Selector tabs={Object.keys(routeDataMapping)} label={"載入範例行程"} onChange={loadExampleData} />
             <button
-                className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
-                onClick={() => navigate("/compare")}
+              className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
+              onClick={() => navigate("/mapping")}
             >
-                行程比較
+              行程比較
             </button>
             {activeTab !== 0 && (
               <button

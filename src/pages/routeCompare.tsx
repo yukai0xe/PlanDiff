@@ -264,6 +264,8 @@ const RouteComparePage = () => {
                 </div>
                 <div className="flex gap-x-2 items-center">
                     <button className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
+                        onClick={() => navigate("/mapping")}>調整行程比較</button>
+                    <button className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
                         onClick={() => navigate("/")}>返回行程總覽</button>
                     <FunctionalDialog />
                 </div>

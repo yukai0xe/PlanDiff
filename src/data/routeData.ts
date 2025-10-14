@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { Route } from "react-router-dom";
 import { v7 as uuidv7 } from "uuid";
 
 export const routeDataMapping: Record<string, string> = {
@@ -27,6 +28,14 @@ export const emptyDateRoute: RecordPoint[] = [
     compareDetail: "",
   },
 ];
+
+export const emptyRoute: Route = {
+  id: uuidv7(),
+  source: "",
+  teamSize: 1,
+  weather: "晴",
+  days: {"": emptyDateRoute}
+}
 
 export const initialRouteData: Route[] = [
   {
