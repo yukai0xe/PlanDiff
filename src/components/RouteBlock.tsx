@@ -1,6 +1,7 @@
 import type React from "react";
 import { useRouteStore } from "@/store/routeStore";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 interface RouteBlockProps {
     route: Route;
@@ -9,7 +10,7 @@ interface RouteBlockProps {
 }
 
 const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
-    const { createNewMapping, updateMappingFriend, toggleMapping, routesMapping, routes} = useRouteStore();
+    const { createNewMapping, updateMappingFriend, toggleMapping, getTopRecordFriend, routesMapping, routes} = useRouteStore();
     const [selected, setSelected] = useState<(RecordPoint & {color: string})[]>([]);
     const dayRecords = dayIdx !== undefined ? Object.values(route.days)[dayIdx] : Object.values(route.days).flatMap(r => r);
     const checkSelected = (record: RecordPoint) => {
@@ -23,6 +24,17 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
         if (route.id !== routes[0].id || routesMapping.stack.length === 0) return false;
         const topRecord = routesMapping.stack[routesMapping.stack.length - 1];
         return topRecord.id === record.id && topRecord?.point === record.point;
+    }
+    const getTag = (record: RecordPoint) => {
+        const mapping = routesMapping.mapping.find(el => el.friend[route.id]?.id === record.id && el.friend[route.id]?.point === record.point);
+        if (!mapping) return "";
+        let dayIdx = 1;
+        for (let [_, dayRecord] of Object.entries(routes[0].days)) {
+            const pointIdx = dayRecord.findIndex(r => mapping?.mainRecord.id === r.id && mapping?.mainRecord.point === r.point);
+            if (pointIdx === -1) dayIdx++;
+            else return `${dayIdx}-${pointIdx + 1}`;
+        }
+        return "";
     }
 
     const handleClick = (record: RecordPoint) => {
@@ -42,6 +54,11 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
                 }]);
             }
         } else {
+            const allFriendRecord = routesMapping.mapping.flatMap(el => Object.values(el.friend));
+            if (allFriendRecord.includes(record) && !Object.values(getTopRecordFriend()).includes(record)) {
+                toast.error("不能選取已被分配的紀錄點");
+                return;
+            }
             if (checkSelected(record)) {
                 setSelected(selected.filter(s => s.id !== record.id && s.point !== record.point));
                 updateMappingFriend(route.id, null);
@@ -92,23 +109,32 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
                             No stops for this day.
                         </div>
                     ) : (
-                        dayRecords.map((r, i) => (
-                            <div
-                                key={i}
-                                className={`flex items-start hover:bg-gray-50 cursor-pointer rounded-md transition border ${checkSelected(r) ? (checkTopSelector(r) ? 'animate-fade font-bold border-2' : 'border-2') : 'border'}`}
-                                style={{ borderColor: getSelectedColor(r),  }}
-                                onClick={() => handleClick(r)}
-                            >
-                                <div className="px-3 py-2 w-10 text-sm text-gray-600 flex-shrink-0">
-                                    <span className="inline-flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-100 rounded-full">
-                                        {i + 1}
-                                    </span>
+                        dayRecords.map((r, i) => {
+                            const tag = getTag(r);
+                            return (
+                                <div className="relative" key={i} data-id={r.id}>
+                                    {(route.id !== routes[0].id) && tag.length > 0 &&
+                                        <div className={`absolute w-[50px] z-0 top-[5px] bg-red-500 text-white text-[10px] text-right font-semibold px-2 py-[1px] rounded-full shadow-sm`}
+                                            style={{right: (-15 - 4 * tag.length) + "px"}}
+                                        >{tag}</div>
+                                    }
+                                    <div
+                                        className={`relative bg-white z-10 flex items-start hover:bg-gray-50 cursor-pointer rounded-md transition border ${checkSelected(r) ? (checkTopSelector(r) ? 'animate-fade font-bold border-2' : 'border-2') : 'border'}`}
+                                        style={{ borderColor: getSelectedColor(r), }}
+                                        onClick={() => handleClick(r)}
+                                    >
+                                        <div className="px-3 py-2 w-10 text-sm text-gray-600 flex-shrink-0">
+                                            <span className="inline-flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-700 bg-gray-100 rounded-full">
+                                                {i + 1}
+                                            </span>
+                                        </div>
+                                        <div className="px-2 py-2 text-sm text-gray-800 whitespace-nowrap">
+                                            {r.point || <span className="text-gray-400">Unnamed place</span>}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="px-2 py-2 text-sm text-gray-800 whitespace-nowrap">
-                                    {r.point || <span className="text-gray-400">Unnamed place</span>}
-                                </div>
-                            </div>
-                        ))
+                            )
+                        })
                     )}
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { initialRouteData } from "@/data/routeData";
+import { getInitialRouteData } from "@/data/routeData";
 import { timeToMinutes, minutesToTime } from "@/lib/utility";
 import { devtools } from "zustand/middleware";
 import toast from "react-hot-toast";
@@ -42,6 +42,7 @@ type RouteStore = {
     createNewMapping: (point: RecordPoint) => void;
     updateMappingFriend: (routeId: string, point: RecordPoint | null) => string;
     toggleMapping: (p: RecordPoint) => string;
+    getTopRecordFriend: () => Record<string, RecordPoint | null>;
     handleRouteCompareChange: () => void;
     handleTimeChange: (cell: Cell, newValue: string | number) => void;
 };
@@ -81,7 +82,7 @@ const sortDataRule = (route: Route) => {
 
 export const useRouteStore = create<RouteStore>()(
     devtools((set, get) => ({
-        routes: initialRouteData.map(sortDataRule),
+        routes: getInitialRouteData().map(sortDataRule),
         routesCompare: [],
         routesMapping: {
             stack: [],
@@ -144,6 +145,11 @@ export const useRouteStore = create<RouteStore>()(
             
             set({ routesMapping });
             return color;
+        },
+        getTopRecordFriend: () => {
+            const routesMapping = get().routesMapping;
+            const topRecord = routesMapping.stack[routesMapping.stack.length - 1];
+            return routesMapping.mapping.find(el => el.mainRecord === topRecord)!.friend;
         },
         handleRouteCompareChange: () => {
             const data = get().routes;

@@ -50,6 +50,7 @@ const RouteTable: React.FC<{
         const route = { ...newData[activeTab] };
         const rows = [...(route.days[date] || [])];
         const lastRowIdx = rowIdx ?? rows.length - 1;
+        debugger;
         if (rows.length > 0) {
             const lastRow = data[activeTab].days[date][lastRowIdx];
             const time =

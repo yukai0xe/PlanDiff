@@ -1,12 +1,11 @@
 import dayjs from "dayjs";
-import { Route } from "react-router-dom";
 import { v7 as uuidv7 } from "uuid";
 
 export const routeDataMapping: Record<string, string> = {
   "南湖大山四天三夜": "route1"
 }
 
-export const emptyDateRoute: RecordPoint[] = [
+export const getEmptyDateRoute: () => RecordPoint[] = () => [
   {
     id: uuidv7(),
     point: "",
@@ -29,15 +28,19 @@ export const emptyDateRoute: RecordPoint[] = [
   },
 ];
 
-export const emptyRoute: Route = {
-  id: uuidv7(),
-  source: "",
-  teamSize: 1,
-  weather: "晴",
-  days: {"": emptyDateRoute}
+export const getEmptyRoute: () => Route = () => {
+  return(
+  {
+    id: uuidv7(),
+    source: "",
+    teamSize: 1,
+    weather: "晴",
+    days: { "": getEmptyDateRoute() }
+    }
+  )
 }
 
-export const initialRouteData: Route[] = [
+export const getInitialRouteData: () => Route[] = () => [
   {
     id: uuidv7(),
     source: "",
@@ -96,8 +99,8 @@ export const initialRouteData: Route[] = [
     teamSize: 1,
     weather: "晴",
     days: {
-      [dayjs().format("YYYY-MM-DD")]: emptyDateRoute,
-      [dayjs().add(1, "day").format("YYYY-MM-DD")]: emptyDateRoute,
+      [dayjs().format("YYYY-MM-DD")]: getEmptyDateRoute(),
+      [dayjs().add(1, "day").format("YYYY-MM-DD")]: getEmptyDateRoute(),
     },
   },
 ];

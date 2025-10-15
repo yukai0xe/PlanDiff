@@ -7,7 +7,7 @@ import { numberToChinese } from "@/lib/utility";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRouteStore } from "@/store/routeStore";
-import { emptyDateRoute, routeDataMapping } from "@/data/routeData";
+import { getEmptyDateRoute, routeDataMapping } from "@/data/routeData";
 import { v7 as uuidv7 } from "uuid";
 import dayjs from "dayjs";
 
@@ -60,7 +60,7 @@ const RoutePlanPage = () => {
         days: {},
       });
       for (let i = 0; i < diffDays; i++) {
-        newRoutes[activeTab].days[currentDate] = emptyDateRoute;
+        newRoutes[activeTab].days[currentDate] = getEmptyDateRoute();
         const dateObj = new Date(currentDate);
         dateObj.setDate(dateObj.getDate() + 1);
         currentDate = dateObj.toISOString().split("T")[0];
@@ -76,7 +76,7 @@ const RoutePlanPage = () => {
 
       const oldRecords = Object.values(routes[activeTab].days);
       for (let i = 0; i < diffDays; i++) {
-        if (i > oldRecords.length - 1) newRoutes[activeTab].days[currentDate] = emptyDateRoute;
+        if (i > oldRecords.length - 1) newRoutes[activeTab].days[currentDate] = getEmptyDateRoute();
         else newRoutes[activeTab].days[currentDate] = oldRecords[i].map((r) => ({ ...r }));
         const dateObj = new Date(currentDate);
         dateObj.setDate(dateObj.getDate() + 1);

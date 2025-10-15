@@ -73,7 +73,7 @@ const FunctionalDialog = () => {
                 onClick={() => setShowBtn(!showBtn)}
             />
             {showBtn && (
-                <div className="absolute z-10 top-10 right-0 flex flex-col gap-2 text-left w-64 bg-white rounded shadow-2xl">
+                <div className="absolute z-50 top-10 right-0 flex flex-col gap-2 text-left w-64 bg-white rounded shadow-2xl">
                     <label className="inline-flex items-center gap-x-2 text-left hover:bg-gray-100 text-gray-800 px-4 py-3 transition cursor-pointer">
                         <FaFileImport className="size-6 hover:text-slate-700 transition" />
                         匯入備份檔
