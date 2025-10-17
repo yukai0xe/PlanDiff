@@ -7,13 +7,14 @@ import { useRouteStore } from "@/store/routeStore";
 import generateDocument from "@/lib/document";
 import { Packer } from "docx";
 import { saveAs } from "file-saver";
+import toast from "react-hot-toast";
 
 const FunctionalDialog = () => {
     const [showBtn, setShowBtn] = useState(false);
-    const { setRoutes, routes, routesCompare } = useRouteStore();
+    const { setRoutes, setRoutesMapping, routes, routesCompare, routesMapping } = useRouteStore();
     
     const exportBackup = () => {
-        const json = JSON.stringify(routes, null, 2);
+        const json = JSON.stringify({ routes, routesMapping } , null, 2);
         const blob = new Blob([json], { type: "application/json" });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -31,16 +32,17 @@ const FunctionalDialog = () => {
         reader.onload = (event) => {
         try {
             const text = event.target?.result as string;
-            const json: Route[] = JSON.parse(text);
-            if (Array.isArray(json)) {
-            setRoutes(json);
-            alert("匯入成功！");
+            const json: {routes: Route[], routesMapping: RoutesMapping} = JSON.parse(text);
+            if (json.routes) {
+                setRoutes(json.routes);
+                setRoutesMapping(json.routesMapping);
+                toast.success("匯入成功");
             } else {
-            alert("JSON 格式錯誤：必須是 Route[]");
+                toast.error("格式錯誤");
             }
         } catch (err) {
-            if (err instanceof Error) alert("讀取或解析 JSON 失敗：" + err.message);
-            else alert("讀取或解析 JSON 失敗：未知錯誤");
+            if (err instanceof Error) toast.error("讀取或解析失敗：" + err.message);
+            else toast.error("讀取或解析失敗：未知錯誤");
         } finally {
             setShowBtn(false);
         }

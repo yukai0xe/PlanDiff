@@ -12,7 +12,7 @@ import { v7 as uuidv7 } from "uuid";
 import dayjs from "dayjs";
 
 const RoutePlanPage = () => {
-  const { setRoutes, routes} = useRouteStore();
+  const { setRoutes, setRoutesMapping, routes} = useRouteStore();
   const [tabs, setTabs] = useState(["預計行程"]);
   const [activeTab, setActiveTab] = useState<number>(0);
   const navigate = useNavigate();
@@ -121,7 +121,10 @@ const RoutePlanPage = () => {
       return module?.default ?? module;
     }
     load(routeDataMapping[route])
-      .then(data => setRoutes(data))
+      .then(data => {
+        setRoutes(data.routes);
+        setRoutesMapping(data.routesMapping);
+      })
   }
 
   useEffect(() => {

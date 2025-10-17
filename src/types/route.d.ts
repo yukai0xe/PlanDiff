@@ -27,6 +27,18 @@ declare global {
         day: string;
         dayPoints: dayPoint[];
     }
+
+    type ClickableCell = {
+        mainRecord: RecordPoint;
+        isClick: boolean;
+        color: string;
+        friend: Record<string, RecordPoint & { date: string } | null>;
+    }
+
+    type RoutesMapping = {
+        stack: RecordPoint[];
+        mapping: ClickableCell[];
+    }
 }
 
 export {}

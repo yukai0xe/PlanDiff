@@ -10,41 +10,46 @@ interface RouteBlockProps {
 }
 
 const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
-    const { createNewMapping, updateMappingFriend, toggleMapping, getTopRecordFriend, routesMapping, routes} = useRouteStore();
-    const [selected, setSelected] = useState<(RecordPoint & {color: string})[]>([]);
-    const dayRecords = dayIdx !== undefined ? Object.values(route.days)[dayIdx] : Object.values(route.days).flatMap(r => r);
+    const { createNewMapping, updateMappingFriend, toggleMapping, getTopRecordFriend, routesMapping, routes } = useRouteStore();
+    const [selected, setSelected] = useState<(RecordPoint & { color: string })[]>([]);
+    const dayRecords = (function () {
+        if (dayIdx !== undefined) {
+            return Object.values(route.days)[dayIdx].map(item => ({ date: Object.keys(route.days)[dayIdx], ...item }));
+        }
+        return Object.entries(route.days).flatMap(([date, items]) => items.map((item) => ({ date, ...item })));
+    }());
     const checkSelected = (record: RecordPoint) => {
         if (!selected) return false;
-        return selected.some(s => s.id === record.id && s.point === record.point);
+        return selected.some(s => s.id === record.id);
     }
     const getSelectedColor = (record: RecordPoint) => {
-        return selected.find(s => s.id === record.id && s.point === record.point)?.color || "";
+        return selected.find(s => s.id === record.id)?.color || "";
     }
     const checkTopSelector = (record: RecordPoint) => {
         if (route.id !== routes[0].id || routesMapping.stack.length === 0) return false;
         const topRecord = routesMapping.stack[routesMapping.stack.length - 1];
-        return topRecord.id === record.id && topRecord?.point === record.point;
+        return topRecord.id === record.id;
     }
     const getTag = (record: RecordPoint) => {
-        const mapping = routesMapping.mapping.find(el => el.friend[route.id]?.id === record.id && el.friend[route.id]?.point === record.point);
+        const mapping = routesMapping.mapping.find(el => el.friend[route.id]?.id === record.id);
         if (!mapping) return "";
         let dayIdx = 1;
         for (let [_, dayRecord] of Object.entries(routes[0].days)) {
-            const pointIdx = dayRecord.findIndex(r => mapping?.mainRecord.id === r.id && mapping?.mainRecord.point === r.point);
+            const pointIdx = dayRecord.findIndex(r => mapping?.mainRecord.id === r.id);
             if (pointIdx === -1) dayIdx++;
             else return `${dayIdx}-${pointIdx + 1}`;
         }
         return "";
     }
 
-    const handleClick = (record: RecordPoint) => {
+    const handleClick = (record: (RecordPoint & {date: string})) => {
         if (route.id === routes[0].id) {
             if (checkSelected(record)) {
-                setSelected(selected.filter(s => s.id !== record.id && s.point !== record.point));
+                setSelected(selected.filter(s => s.id !== record.id));
                 toggleMapping(record);
             }
             else {
-                if (!routesMapping.mapping.some(el => el.mainRecord.id === record.id && el.mainRecord.point === record.point)) {
+                if (!routesMapping.mapping.some(el => el.mainRecord.id === record.id)) {
                     createNewMapping(record);
                 }
                 const color = toggleMapping(record);
@@ -87,15 +92,23 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
     }
 
     useEffect(() => {
-        if (route.id === routes[0].id) return;
-        const clickRecords = routesMapping.mapping.filter(el => el.isClick);
-        const newSelected = clickRecords
-            .filter(r=> r.friend[route.id] !== null)
-            .map(r => ({
-                ...r.friend[route.id]!,
-                color: r.color
-            }))
-        setSelected(newSelected);
+        setSelected((() => {
+            if (route.id === routes[0].id) {
+                return routesMapping.mapping.filter(v => (v.isClick)).map(r => ({
+                    ...r.mainRecord,
+                    color: r.color
+                }))
+            }
+            else {
+                const clickRecords = routesMapping.mapping.filter(el => el.isClick);
+                return clickRecords
+                    .filter(r => r.friend[route.id] !== null)
+                    .map(r => ({
+                        ...r.friend[route.id]!,
+                        color: r.color
+                    }))
+            }
+        }));
     }, [routesMapping.mapping.map(v => (v?.isClick ? "1" : "0")).join("|")])
 
     return (
