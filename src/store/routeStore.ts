@@ -3,27 +3,25 @@ import { getInitialRouteData } from "@/data/routeData";
 import { timeToMinutes, minutesToTime } from "@/lib/utility";
 import { devtools, subscribeWithSelector } from "zustand/middleware";
 import toast from "react-hot-toast";
-import stringSimilarity from "string-similarity";
+// import stringSimilarity from "string-similarity";
 import { randomHexColor } from "@/lib/colorMap";
 import { shallow } from "zustand/shallow"; 
 
-function normalizeName(name: string): string {
-    return name
-        .replace(/\p{White_Space}+/gu, "")
-        .replace(/[（）()]/g, "")
-        .replace(/-/g, "")
-        .replace(/\p{N}+/gu, "")
-        .toLowerCase();
-}
+// function normalizeName(name: string): string {
+//     return name
+//         .replace(/\p{White_Space}+/gu, "")
+//         .replace(/[（）()]/g, "")
+//         .replace(/-/g, "")
+//         .replace(/\p{N}+/gu, "")
+//         .toLowerCase();
+// }
 
-function isSamePoint(a: string, b: string): boolean {
-    const normalizedA = normalizeName(a);
-    const normalizedB = normalizeName(b);
-    const similarity = stringSimilarity.compareTwoStrings(normalizedA, normalizedB);
-    return similarity >= 0.9;
-}
-
-
+// function isSamePoint(a: string, b: string): boolean {
+//     const normalizedA = normalizeName(a);
+//     const normalizedB = normalizeName(b);
+//     const similarity = stringSimilarity.compareTwoStrings(normalizedA, normalizedB);
+//     return similarity >= 0.9;
+// }
 
 type RouteStore = {
     routes: Route[];
