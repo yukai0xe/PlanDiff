@@ -1,7 +1,6 @@
 import type React from "react";
 import { useRouteStore } from "@/store/routeStore";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 
 interface RouteBlockProps {
     route: Route;
@@ -10,7 +9,7 @@ interface RouteBlockProps {
 }
 
 const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
-    const { createNewMapping, updateMappingFriend, toggleMapping, getTopRecordFriend, routesMapping, routes } = useRouteStore();
+    const { createNewMapping, updateMappingFriend, toggleMapping, routesMapping, routes } = useRouteStore();
     const [selected, setSelected] = useState<(RecordPoint & { color: string })[]>([]);
     const dayRecords = (function () {
         if (dayIdx !== undefined) {
