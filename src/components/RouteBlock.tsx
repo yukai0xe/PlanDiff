@@ -31,15 +31,18 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
         return topRecord.id === record.id;
     }
     const getTag = (record: RecordPoint) => {
-        const mapping = routesMapping.mapping.find(el => el.friend[route.id]?.id === record.id);
-        if (!mapping) return "";
-        let dayIdx = 1;
-        for (let [_, dayRecord] of Object.entries(routes[0].days)) {
-            const pointIdx = dayRecord.findIndex(r => mapping?.mainRecord.id === r.id);
-            if (pointIdx === -1) dayIdx++;
-            else return `${dayIdx}-${pointIdx + 1}`;
+        const tags = [];
+        for (let mapping of routesMapping.mapping) {
+            if (mapping.friend[route.id]?.id === record.id) {
+                let dayIdx = 1;
+                for (let [_, dayRecord] of Object.entries(routes[0].days)) {
+                    const pointIdx = dayRecord.findIndex(r => mapping?.mainRecord.id === r.id);
+                    if (pointIdx !== -1) tags.push(`${dayIdx}-${pointIdx + 1}`);
+                    dayIdx++;
+                }
+            }
         }
-        return "";
+        return tags.join("、");
     }
 
     const handleClick = (record: (RecordPoint & {date: string})) => {
@@ -59,11 +62,6 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
                 }]);
             }
         } else {
-            const allFriendRecord = routesMapping.mapping.flatMap(el => Object.values(el.friend));
-            if (allFriendRecord.includes(record) && !Object.values(getTopRecordFriend()).includes(record)) {
-                toast.error("不能選取已被分配的紀錄點");
-                return;
-            }
             if (checkSelected(record)) {
                 setSelected(selected.filter(s => s.id !== record.id && s.point !== record.point));
                 updateMappingFriend(route.id, null);
@@ -127,8 +125,8 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
                             return (
                                 <div className="relative" key={i} data-id={r.id}>
                                     {(route.id !== routes[0].id) && tag.length > 0 &&
-                                        <div className={`absolute w-[50px] z-0 top-[5px] bg-red-500 text-white text-[10px] text-right font-semibold px-2 py-[1px] rounded-full shadow-sm`}
-                                            style={{right: (-15 - 4 * tag.length) + "px"}}
+                                        <div className={`absolute z-0 top-[5px] bg-red-500 text-white text-[10px] text-right font-semibold px-2 py-[1px] rounded-full shadow-sm`}
+                                            style={{right: (-15 - 5 * tag.length) + "px", width: (50 + 5 * tag.length) + "px"}}
                                         >{tag}</div>
                                     }
                                     <div

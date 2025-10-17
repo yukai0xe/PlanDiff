@@ -1738,6 +1738,314 @@
         "duration": 0,
         "note": "",
         "compareDetail": ""
+      },
+      {
+        "date": "2025-10-18",
+        "id": "0199f288-15bc-72ba-a3c3-76506c76ebe6",
+        "point": "審馬陣山岔路口 ",
+        "arrive": "08:50",
+        "rest": 20,
+        "depart": "09:10",
+        "duration": 140,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-18",
+        "id": "0199f2a1-b29c-7168-9892-f4eb469b0125",
+        "point": "南湖北山岔路口 ",
+        "arrive": "11:30",
+        "rest": 10,
+        "depart": "11:40",
+        "duration": 10,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-18",
+        "id": "0199f2a1-b431-718b-98f2-519d26855033",
+        "point": "南湖北山",
+        "arrive": "11:50",
+        "rest": 50,
+        "depart": "12:40",
+        "duration": 10,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-18",
+        "id": "0199f2a1-b5a7-76a5-a386-7501675d571d",
+        "point": "南湖北山岔路口 ",
+        "arrive": "12:50",
+        "rest": 10,
+        "depart": "13:00",
+        "duration": 80,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-18",
+        "id": "0199f2a1-b70b-7429-8b8e-ea534b30729a",
+        "point": "南湖北峰",
+        "arrive": "14:20",
+        "rest": 20,
+        "depart": "14:40",
+        "duration": 60,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-18",
+        "id": "0199f2a2-023e-717d-934a-6ef7fad5f14a",
+        "point": "南湖山屋",
+        "arrive": "15:40",
+        "rest": 0,
+        "depart": "13:50",
+        "duration": 0,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-31df-7138-ae12-41c26425aa2e",
+        "point": "南湖山屋",
+        "arrive": "12:00",
+        "rest": -510,
+        "depart": "03:30",
+        "duration": 40,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-31df-7138-ae12-45c40dac4829",
+        "point": "主東鞍部",
+        "arrive": "04:10",
+        "rest": 0,
+        "depart": "04:10",
+        "duration": 20,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-5c3a-744f-829a-0e9065c54c07",
+        "point": "主南叉路",
+        "arrive": "04:30",
+        "rest": 0,
+        "depart": "04:30",
+        "duration": 40,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-5dec-71a8-8ef6-8202a3d00638",
+        "point": "南湖大山主峰 ",
+        "arrive": "05:10",
+        "rest": 50,
+        "depart": "06:00",
+        "duration": 30,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-5f8c-728f-b4d2-616bd40d4d3a",
+        "point": "主南叉路 ",
+        "arrive": "06:30",
+        "rest": 0,
+        "depart": "06:30",
+        "duration": 10,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-60ef-7618-8448-89c8652b938c",
+        "point": "主東鞍部",
+        "arrive": "06:40",
+        "rest": 0,
+        "depart": "06:40",
+        "duration": 30,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-6258-76ce-9461-d54286e317b5",
+        "point": "四叉路口 ",
+        "arrive": "07:10",
+        "rest": 0,
+        "depart": "07:10",
+        "duration": 40,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-6392-716d-85a7-734a9618f98c",
+        "point": "南湖大山東峰",
+        "arrive": "07:50",
+        "rest": 30,
+        "depart": "08:20",
+        "duration": 30,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-64f6-70ad-aa2a-2ad7c6457477",
+        "point": "四岔路口",
+        "arrive": "08:50",
+        "rest": 0,
+        "depart": "08:50",
+        "duration": 50,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-b9dc-7018-bee1-1a101785895a",
+        "point": "南湖山屋 ",
+        "arrive": "09:40",
+        "rest": 60,
+        "depart": "10:40",
+        "duration": 60,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-bbcd-74ed-b107-0e98437273b2",
+        "point": "南湖北峰 ",
+        "arrive": "11:40",
+        "rest": 0,
+        "depart": "11:40",
+        "duration": 60,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-bd45-7435-a3b1-6dba08241fa0",
+        "point": "南湖北山岔路口",
+        "arrive": "12:40",
+        "rest": 20,
+        "depart": "13:00",
+        "duration": 60,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-ebbe-70c8-b44a-ff70e399a2fb",
+        "point": "審馬陣山岔路口 ",
+        "arrive": "14:00",
+        "rest": 0,
+        "depart": "14:00",
+        "duration": 100,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-19",
+        "id": "0199f2a3-ed2e-774e-8779-253ff19703b6",
+        "point": "新雲稜山屋 ",
+        "arrive": "15:40",
+        "rest": 0,
+        "depart": "13:00",
+        "duration": 0,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-20",
+        "id": "0199f2a3-31df-7138-ae12-48823e3accb3",
+        "point": "11.7k 新雲稜山屋",
+        "arrive": "12:00",
+        "rest": -300,
+        "depart": "07:00",
+        "duration": 20,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-20",
+        "id": "0199f2a3-31df-7138-ae12-4d6a28873751",
+        "point": "11k 木杆鞍部",
+        "arrive": "07:20",
+        "rest": 0,
+        "depart": "07:20",
+        "duration": 130,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-20",
+        "id": "0199f2a5-bb6a-7179-85f4-04ff78717fe9",
+        "point": "8.5k 多加屯山前峰",
+        "arrive": "09:30",
+        "rest": 20,
+        "depart": "09:50",
+        "duration": 20,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-20",
+        "id": "0199f2a5-bccd-733c-9e2f-f595202aa72c",
+        "point": "8k 松風嶺",
+        "arrive": "10:10",
+        "rest": 0,
+        "depart": "10:10",
+        "duration": 90,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-20",
+        "id": "0199f2a5-be3c-7638-9c97-349f56cc949b",
+        "point": "5.1k 南湖登山口",
+        "arrive": "11:40",
+        "rest": 0,
+        "depart": "11:40",
+        "duration": 10,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-20",
+        "id": "0199f2a5-c44f-773a-adbe-2bbb56447e46",
+        "point": "勝光山",
+        "arrive": "11:50",
+        "rest": 30,
+        "depart": "12:20",
+        "duration": 50,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-20",
+        "id": "0199f2a5-c5a4-7071-9996-3586530943bb",
+        "point": "勝光山登山口",
+        "arrive": "13:10",
+        "rest": 0,
+        "depart": "13:10",
+        "duration": 30,
+        "note": "",
+        "compareDetail": ""
+      },
+      {
+        "date": "2025-10-18",
+        "id": "0199f288-15bc-72ba-a3c3-72badf5dc7fd",
+        "point": "新雲稜山屋",
+        "arrive": "",
+        "rest": null,
+        "depart": "06:00",
+        "duration": 170,
+        "note": "出發集合",
+        "compareDetail": ""
       }
     ],
     "mapping": [
@@ -2147,6 +2455,1438 @@
             "rest": 30,
             "depart": "14:00",
             "duration": 210,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-18",
+          "id": "0199f288-15bc-72ba-a3c3-72badf5dc7fd",
+          "point": "新雲稜山屋",
+          "arrive": "",
+          "rest": null,
+          "depart": "06:00",
+          "duration": 170,
+          "note": "出發集合",
+          "compareDetail": ""
+        },
+        "color": "#8d9d15",
+        "isClick": true,
+        "friend": {
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-17",
+            "id": "0199f2b9-023a-71ef-9751-fc347d98b53d",
+            "point": "新雲稜山屋",
+            "arrive": "13:30",
+            "rest": 30,
+            "depart": "14:00",
+            "duration": 210,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-18",
+            "id": "0199f2ad-ce54-756d-9543-94f43507f377",
+            "point": "新雲稜山屋 ",
+            "arrive": "12:00",
+            "rest": -127,
+            "depart": "09:53",
+            "duration": 160,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-5790-755a-8bfa-aae01cd05ec8",
+            "point": "新雲稜山屋 ",
+            "arrive": "12:00",
+            "rest": -420,
+            "depart": "05:00",
+            "duration": 160,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-18",
+            "id": "0199f288-15bc-72ba-a3c3-845731e20c81",
+            "point": "新雲稜山屋",
+            "arrive": "12:00",
+            "rest": -460,
+            "depart": "04:20",
+            "duration": 210,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-18",
+          "id": "0199f288-15bc-72ba-a3c3-76506c76ebe6",
+          "point": "審馬陣山岔路口 ",
+          "arrive": "08:50",
+          "rest": 20,
+          "depart": "09:10",
+          "duration": 140,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#226168",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-18",
+            "id": "0199f288-15bc-72ba-a3c3-88e262e765a6",
+            "point": "審馬陣山岔路口",
+            "arrive": "07:50",
+            "rest": 67,
+            "depart": "08:57",
+            "duration": 138,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-18",
+            "id": "0199f2ad-ce54-756d-9543-980cabc51220",
+            "point": "審馬陣山岔路口",
+            "arrive": "12:33",
+            "rest": 0,
+            "depart": "12:33",
+            "duration": 141,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-5790-755a-8bfa-aeb00d7c431f",
+            "point": "審馬陣山登山口",
+            "arrive": "07:40",
+            "rest": 55,
+            "depart": "08:35",
+            "duration": 115,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": null
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-18",
+          "id": "0199f2a1-b29c-7168-9892-f4eb469b0125",
+          "point": "南湖北山岔路口 ",
+          "arrive": "11:30",
+          "rest": 10,
+          "depart": "11:40",
+          "duration": 10,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#097b74",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-18",
+            "id": "0199f2a8-62fd-728b-9a82-1c91e9dfba00",
+            "point": "南湖北山岔路口",
+            "arrive": "11:15",
+            "rest": 51,
+            "depart": "12:06",
+            "duration": 14,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-18",
+            "id": "0199f2ae-2acf-742e-8607-a8591c484dbf",
+            "point": "南湖北山岔路口",
+            "arrive": "14:54",
+            "rest": 0,
+            "depart": "14:54",
+            "duration": 9,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-d173-71db-9871-ceffe37e6fa3",
+            "point": "南湖北山登山口",
+            "arrive": "10:30",
+            "rest": 8,
+            "depart": "10:38",
+            "duration": 7,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b8-4255-74ff-88bc-fb90333139e2",
+            "point": "南湖北山岔路口",
+            "arrive": "08:10",
+            "rest": 0,
+            "depart": "08:10",
+            "duration": 10,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-18",
+          "id": "0199f2a1-b431-718b-98f2-519d26855033",
+          "point": "南湖北山",
+          "arrive": "11:50",
+          "rest": 50,
+          "depart": "12:40",
+          "duration": 10,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#2c1499",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-18",
+            "id": "0199f2a8-6464-72ea-abfa-889e350416b0",
+            "point": "南湖北山",
+            "arrive": "12:20",
+            "rest": 0,
+            "depart": "12:20",
+            "duration": 45,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-18",
+            "id": "0199f2ae-2cf7-721a-b336-0a4ffb005c94",
+            "point": "南湖北山",
+            "arrive": "15:03",
+            "rest": 0,
+            "depart": "15:03",
+            "duration": 7,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-d2c7-772a-b7cf-03a1fe5adc36",
+            "point": "南湖北山 ",
+            "arrive": "10:45",
+            "rest": 11,
+            "depart": "10:56",
+            "duration": 7,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-3e7b-745c-b80b-f0e668c20084",
+            "point": "南湖北山",
+            "arrive": "08:20",
+            "rest": 30,
+            "depart": "08:50",
+            "duration": 10,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-18",
+          "id": "0199f2a1-b5a7-76a5-a386-7501675d571d",
+          "point": "南湖北山岔路口 ",
+          "arrive": "12:50",
+          "rest": 10,
+          "depart": "13:00",
+          "duration": 80,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#90147f",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-18",
+            "id": "0199f2a8-65d7-772d-902c-69d56109d189",
+            "point": "南湖北山岔路口 ",
+            "arrive": "13:05",
+            "rest": 0,
+            "depart": "13:05",
+            "duration": 55,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-18",
+            "id": "0199f2ae-533e-77a9-abc7-7bffba526a3f",
+            "point": "南湖北山岔路口 ",
+            "arrive": "15:10",
+            "rest": 0,
+            "depart": "15:10",
+            "duration": 75,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-d43f-70ad-95b6-2fcdde68ef69",
+            "point": "南湖北山登山口",
+            "arrive": "11:03",
+            "rest": 10,
+            "depart": "11:13",
+            "duration": 60,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-3fd5-75df-9c4c-17a48495d1a2",
+            "point": "南湖北山岔路口 ",
+            "arrive": "09:00",
+            "rest": 0,
+            "depart": "09:00",
+            "duration": 60,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-18",
+          "id": "0199f2a1-b70b-7429-8b8e-ea534b30729a",
+          "point": "南湖北峰",
+          "arrive": "14:20",
+          "rest": 20,
+          "depart": "14:40",
+          "duration": 60,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#902796",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-18",
+            "id": "0199f2a8-6746-709b-8dfc-9a56764439dc",
+            "point": "南湖北峰",
+            "arrive": "14:00",
+            "rest": 60,
+            "depart": "15:00",
+            "duration": 28,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-18",
+            "id": "0199f2ae-54d3-7169-bfd0-7cd6ac3b4ee9",
+            "point": "南湖北峰",
+            "arrive": "16:25",
+            "rest": 0,
+            "depart": "16:25",
+            "duration": 40,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-d58b-72ed-8f4e-00724537fdfd",
+            "point": "南湖北峰 ",
+            "arrive": "12:13",
+            "rest": 8,
+            "depart": "12:21",
+            "duration": 29,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-4131-73f0-a505-613b334c7b18",
+            "point": "南湖北峰 ",
+            "arrive": "10:00",
+            "rest": 20,
+            "depart": "10:20",
+            "duration": 40,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-18",
+          "id": "0199f2a2-023e-717d-934a-6ef7fad5f14a",
+          "point": "南湖山屋",
+          "arrive": "15:40",
+          "rest": 0,
+          "depart": "13:50",
+          "duration": 0,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#870d2a",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-18",
+            "id": "0199f2a8-689b-724d-8655-9b567a648841",
+            "point": "南湖山屋 ",
+            "arrive": "15:28",
+            "rest": 0,
+            "depart": "15:28",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-18",
+            "id": "0199f2ae-55fa-730f-9c91-cc06047bc632",
+            "point": "南湖山屋",
+            "arrive": "17:05",
+            "rest": 0,
+            "depart": "17:05",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-d6cf-75fe-a6aa-1615b25f8c0a",
+            "point": "南湖山屋",
+            "arrive": "12:50",
+            "rest": 75,
+            "depart": "14:05",
+            "duration": 32,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-427a-776c-9bf5-5b9b0cc297ad",
+            "point": "南湖山屋 ",
+            "arrive": "11:00",
+            "rest": 55,
+            "depart": "11:55",
+            "duration": 105,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-31df-7138-ae12-41c26425aa2e",
+          "point": "南湖山屋",
+          "arrive": "12:00",
+          "rest": -510,
+          "depart": "03:30",
+          "duration": 40,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#c10b45",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-bc21-7121-8ac8-214f4158b524",
+            "point": "南湖山屋",
+            "arrive": "12:00",
+            "rest": -483,
+            "depart": "03:57",
+            "duration": 32,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2ad-ce54-756d-9543-9db32d5115b6",
+            "point": "南湖山屋",
+            "arrive": "12:00",
+            "rest": -392,
+            "depart": "05:28",
+            "duration": 36,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b3-d6cf-75fe-a6aa-1615b25f8c0a",
+            "point": "南湖山屋",
+            "arrive": "12:50",
+            "rest": 75,
+            "depart": "14:05",
+            "duration": 32,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-427a-776c-9bf5-5b9b0cc297ad",
+            "point": "南湖山屋 ",
+            "arrive": "11:00",
+            "rest": 55,
+            "depart": "11:55",
+            "duration": 105,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-31df-7138-ae12-45c40dac4829",
+          "point": "主東鞍部",
+          "arrive": "04:10",
+          "rest": 0,
+          "depart": "04:10",
+          "duration": 20,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#150e62",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-bc21-7121-8ac8-2732c94076b9",
+            "point": "主東鞍部",
+            "arrive": "04:29",
+            "rest": 0,
+            "depart": "04:29",
+            "duration": 24,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2ad-ce54-756d-9543-a3a30ea33167",
+            "point": "主東鞍部 ",
+            "arrive": "06:04",
+            "rest": 0,
+            "depart": "06:04",
+            "duration": 13,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-089a-7635-9063-3db746fc5587",
+            "point": "主東鞍部 ",
+            "arrive": "14:37",
+            "rest": 0,
+            "depart": "14:37",
+            "duration": 10,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-5c3a-744f-829a-0e9065c54c07",
+          "point": "主南叉路",
+          "arrive": "04:30",
+          "rest": 0,
+          "depart": "04:30",
+          "duration": 40,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#8f6214",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-d718-74b8-9b48-b7db5485db3a",
+            "point": "主南叉路",
+            "arrive": "04:53",
+            "rest": 0,
+            "depart": "04:53",
+            "duration": 27,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2ae-ac1e-733f-b74e-e9010b3d3e69",
+            "point": "主南叉路",
+            "arrive": "06:17",
+            "rest": 0,
+            "depart": "06:17",
+            "duration": 20,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-09e3-7369-b59d-da3e869fb53d",
+            "point": "主南叉路",
+            "arrive": "14:47",
+            "rest": 0,
+            "depart": "14:47",
+            "duration": 27,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-5dec-71a8-8ef6-8202a3d00638",
+          "point": "南湖大山主峰 ",
+          "arrive": "05:10",
+          "rest": 50,
+          "depart": "06:00",
+          "duration": 30,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#124191",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-d886-768f-a1d5-90f665323a71",
+            "point": "南湖大山主峰 ",
+            "arrive": "05:20",
+            "rest": 62,
+            "depart": "06:22",
+            "duration": 18,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2ae-ad55-72f2-b8f3-7b97e6d112de",
+            "point": "南湖大山主峰",
+            "arrive": "06:37",
+            "rest": 19,
+            "depart": "06:56",
+            "duration": 17,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-1d51-779c-9baf-60bc5fb0b911",
+            "point": "南湖大山主峰",
+            "arrive": "15:14",
+            "rest": 0,
+            "depart": "15:14",
+            "duration": 26,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-4395-7099-8178-fd5b526e4313",
+            "point": "南湖大山主峰",
+            "arrive": "13:40",
+            "rest": 40,
+            "depart": "14:20",
+            "duration": 33,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-5f8c-728f-b4d2-616bd40d4d3a",
+          "point": "主南叉路 ",
+          "arrive": "06:30",
+          "rest": 0,
+          "depart": "06:30",
+          "duration": 10,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#410f75",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-d9de-76ad-954c-341e4533d61e",
+            "point": "主南叉路",
+            "arrive": "06:40",
+            "rest": 0,
+            "depart": "06:40",
+            "duration": 17,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2ae-f663-76ca-8348-96e4bde9593e",
+            "point": "主南叉路",
+            "arrive": "07:13",
+            "rest": 0,
+            "depart": "07:13",
+            "duration": 445,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-1e93-743f-978a-e24e36bccb3f",
+            "point": "主南叉路",
+            "arrive": "15:40",
+            "rest": 0,
+            "depart": "15:40",
+            "duration": 7,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-60ef-7618-8448-89c8652b938c",
+          "point": "主東鞍部",
+          "arrive": "06:40",
+          "rest": 0,
+          "depart": "06:40",
+          "duration": 30,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#51154c",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-db31-7491-a7b1-c36ccb30af16",
+            "point": "主東鞍部",
+            "arrive": "06:57",
+            "rest": 0,
+            "depart": "06:57",
+            "duration": 33,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-1fa0-700e-b724-d9d8ff856545",
+            "point": "主東鞍部 ",
+            "arrive": "15:47",
+            "rest": 0,
+            "depart": "15:47",
+            "duration": 18,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-6258-76ce-9461-d54286e317b5",
+          "point": "四叉路口 ",
+          "arrive": "07:10",
+          "rest": 0,
+          "depart": "07:10",
+          "duration": 40,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#81611d",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-dc81-774b-b670-4c8cdc28d177",
+            "point": "四叉路口",
+            "arrive": "07:30",
+            "rest": 0,
+            "depart": "07:30",
+            "duration": 30,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-4033-70ca-9936-12363838e34f",
+            "point": "四叉路口",
+            "arrive": "16:05",
+            "rest": 0,
+            "depart": "16:05",
+            "duration": 36,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-8471-75ce-8c93-47dfb262a597",
+            "point": "四叉路口",
+            "arrive": "14:53",
+            "rest": 0,
+            "depart": "14:53",
+            "duration": 52,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-6392-716d-85a7-734a9618f98c",
+          "point": "南湖大山東峰",
+          "arrive": "07:50",
+          "rest": 30,
+          "depart": "08:20",
+          "duration": 30,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#0d48a0",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-dda3-711a-b33d-31a86828b5c5",
+            "point": "南湖大山東峰",
+            "arrive": "08:00",
+            "rest": 40,
+            "depart": "08:40",
+            "duration": 63,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-416c-74d2-b705-64a778b87355",
+            "point": "南湖大山東峰",
+            "arrive": "16:41",
+            "rest": 14,
+            "depart": "16:55",
+            "duration": 41,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-85a8-7478-a254-a7a33796b1e3",
+            "point": "南湖大山東峰",
+            "arrive": "15:45",
+            "rest": 0,
+            "depart": "15:45",
+            "duration": 75,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-64f6-70ad-aa2a-2ad7c6457477",
+          "point": "四岔路口",
+          "arrive": "08:50",
+          "rest": 0,
+          "depart": "08:50",
+          "duration": 50,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#a42e13",
+        "isClick": true,
+        "friend": {}
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-b9dc-7018-bee1-1a101785895a",
+          "point": "南湖山屋 ",
+          "arrive": "09:40",
+          "rest": 60,
+          "depart": "10:40",
+          "duration": 60,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#785112",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a8-ded1-732d-b174-77ae6e59f570",
+            "point": "南湖山屋",
+            "arrive": "09:43",
+            "rest": 91,
+            "depart": "11:14",
+            "duration": 47,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2ae-f798-7446-b03b-bb02b7725828",
+            "point": "南湖山屋",
+            "arrive": "14:38",
+            "rest": 0,
+            "depart": "14:38",
+            "duration": 38,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-18",
+            "id": "0199f2b4-4293-7721-be8e-d79ebb6f6230",
+            "point": "南湖山屋 ",
+            "arrive": "17:36",
+            "rest": 0,
+            "depart": "17:36",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-18",
+            "id": "0199f2b9-86f7-72a2-ae44-2904b48bbdfa",
+            "point": "南湖山屋 ",
+            "arrive": "17:00",
+            "rest": 0,
+            "depart": "17:00",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-bbcd-74ed-b107-0e98437273b2",
+          "point": "南湖北峰 ",
+          "arrive": "11:40",
+          "rest": 0,
+          "depart": "11:40",
+          "duration": 60,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#09903b",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a9-6069-73b6-bfb8-62071589058e",
+            "point": "南湖北峰",
+            "arrive": "12:01",
+            "rest": 13,
+            "depart": "12:14",
+            "duration": 62,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2ae-f89b-766f-9806-42646d2c0d32",
+            "point": "南湖北峰",
+            "arrive": "15:16",
+            "rest": 0,
+            "depart": "15:16",
+            "duration": 52,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-19",
+            "id": "0199f2b3-5790-755a-8bfa-b774a037599b",
+            "point": "南湖北峰 ",
+            "arrive": "10:02",
+            "rest": 8,
+            "depart": "10:10",
+            "duration": 40,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-19",
+            "id": "0199f2b8-4255-74ff-88bd-0014a4f67977",
+            "point": "南湖北峰",
+            "arrive": "08:50",
+            "rest": 15,
+            "depart": "09:05",
+            "duration": 140,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-bd45-7435-a3b1-6dba08241fa0",
+          "point": "南湖北山岔路口",
+          "arrive": "12:40",
+          "rest": 20,
+          "depart": "13:00",
+          "duration": 60,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#09673e",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a9-627a-752f-b362-702d6778be5a",
+            "point": "南湖北山岔路口",
+            "arrive": "13:16",
+            "rest": 16,
+            "depart": "13:32",
+            "duration": 66,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-19",
+            "id": "0199f2af-1df1-72e8-9f7a-7afb17c84cb7",
+            "point": "南湖北山岔路口",
+            "arrive": "16:08",
+            "rest": 0,
+            "depart": "16:08",
+            "duration": -557,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-19",
+            "id": "0199f2b4-7b9e-74fe-aaea-da06e65d72f4",
+            "point": "南湖北山登山口",
+            "arrive": "10:50",
+            "rest": 18,
+            "depart": "11:08",
+            "duration": 46,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-ebbe-70c8-b44a-ff70e399a2fb",
+          "point": "審馬陣山岔路口 ",
+          "arrive": "14:00",
+          "rest": 0,
+          "depart": "14:00",
+          "duration": 100,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#a44d13",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a9-640f-76e0-bb5e-b4a0edfe03aa",
+            "point": "審馬陣山岔路口",
+            "arrive": "14:38",
+            "rest": 0,
+            "depart": "14:38",
+            "duration": 148,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-20",
+            "id": "0199f2ad-ce54-756d-9543-a58a0d4f5259",
+            "point": "審馬陣山岔路口",
+            "arrive": "12:00",
+            "rest": -309,
+            "depart": "06:51",
+            "duration": 90,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-19",
+            "id": "0199f2b4-7ccb-7204-b080-758903ae5bb5",
+            "point": "審馬陣山登山口",
+            "arrive": "11:54",
+            "rest": 16,
+            "depart": "12:10",
+            "duration": 85,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-19",
+            "id": "0199f2b9-c381-77b9-92bd-c982eb6eee49",
+            "point": "審馬陣山岔路口",
+            "arrive": "11:25",
+            "rest": 55,
+            "depart": "12:20",
+            "duration": 110,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-19",
+          "id": "0199f2a3-ed2e-774e-8779-253ff19703b6",
+          "point": "新雲稜山屋 ",
+          "arrive": "15:40",
+          "rest": 0,
+          "depart": "13:00",
+          "duration": 0,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#a41e4f",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-19",
+            "id": "0199f2a9-6561-7343-a757-db1b69ca3194",
+            "point": "新雲稜山屋 ",
+            "arrive": "17:06",
+            "rest": 0,
+            "depart": "17:06",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-20",
+            "id": "0199f2b0-eb42-7360-bdda-84d9d8bb13bc",
+            "point": "新雲稜山屋",
+            "arrive": "08:21",
+            "rest": 4,
+            "depart": "08:25",
+            "duration": 13,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-19",
+            "id": "0199f2b4-7dec-71f0-919b-7ea64b65bf0a",
+            "point": "新雲稜山屋",
+            "arrive": "13:35",
+            "rest": 70,
+            "depart": "14:45",
+            "duration": 155,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-19",
+            "id": "0199f2b9-c6aa-768e-be5b-ead22a87a9f1",
+            "point": "新雲稜山屋",
+            "arrive": "14:10",
+            "rest": 0,
+            "depart": "14:10",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-20",
+          "id": "0199f2a3-31df-7138-ae12-48823e3accb3",
+          "point": "11.7k 新雲稜山屋",
+          "arrive": "12:00",
+          "rest": -300,
+          "depart": "07:00",
+          "duration": 20,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#1d3672",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-20",
+            "id": "0199f2a8-bc21-7121-8ac8-293bb2f187bc",
+            "point": "新雲稜山屋",
+            "arrive": "12:00",
+            "rest": -291,
+            "depart": "07:09",
+            "duration": 14,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-19",
+            "id": "0199f2b4-7dec-71f0-919b-7ea64b65bf0a",
+            "point": "新雲稜山屋",
+            "arrive": "13:35",
+            "rest": 70,
+            "depart": "14:45",
+            "duration": 155,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-20",
+            "id": "0199f2b8-4255-74ff-88bd-04982633904f",
+            "point": "新雲稜山屋",
+            "arrive": "12:00",
+            "rest": -180,
+            "depart": "09:00",
+            "duration": 110,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-20",
+            "id": "0199f2b0-eb42-7360-bdda-84d9d8bb13bc",
+            "point": "新雲稜山屋",
+            "arrive": "08:21",
+            "rest": 4,
+            "depart": "08:25",
+            "duration": 13,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-20",
+          "id": "0199f2a3-31df-7138-ae12-4d6a28873751",
+          "point": "11k 木杆鞍部",
+          "arrive": "07:20",
+          "rest": 0,
+          "depart": "07:20",
+          "duration": 130,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#6b0616",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-20",
+            "id": "0199f2a8-bc21-7121-8ac8-2e0bddd44e1c",
+            "point": "木杆鞍部",
+            "arrive": "07:23",
+            "rest": 0,
+            "depart": "07:23",
+            "duration": 104,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-20",
+            "id": "0199f2ad-ce54-756d-9543-a96f522bb189",
+            "point": "木杆鞍部",
+            "arrive": "08:38",
+            "rest": 10,
+            "depart": "08:48",
+            "duration": 80,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-20",
+          "id": "0199f2a5-bb6a-7179-85f4-04ff78717fe9",
+          "point": "8.5k 多加屯山前峰",
+          "arrive": "09:30",
+          "rest": 20,
+          "depart": "09:50",
+          "duration": 20,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#31909b",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-20",
+            "id": "0199f2a9-9c7b-7028-86ad-18af01c0e4de",
+            "point": "多加屯山前峰",
+            "arrive": "09:07",
+            "rest": 0,
+            "depart": "09:07",
+            "duration": 185,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-20",
+            "id": "0199f2af-51f8-717c-a228-84a009212e38",
+            "point": "多加屯山前峰",
+            "arrive": "10:08",
+            "rest": 10,
+            "depart": "10:18",
+            "duration": 33,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-20",
+            "id": "0199f2b8-4255-74ff-88bd-08c1045d7ead",
+            "point": "多加屯山前峰",
+            "arrive": "10:50",
+            "rest": 20,
+            "depart": "11:10",
+            "duration": 15,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-20",
+          "id": "0199f2a5-bccd-733c-9e2f-f595202aa72c",
+          "point": "8k 松風嶺",
+          "arrive": "10:10",
+          "rest": 0,
+          "depart": "10:10",
+          "duration": 90,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#128c86",
+        "isClick": true,
+        "friend": {
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-20",
+            "id": "0199f2b9-f67d-776c-907d-8d95ef444aee",
+            "point": "8k 松風嶺",
+            "arrive": "11:25",
+            "rest": 0,
+            "depart": "11:25",
+            "duration": 35,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-20",
+          "id": "0199f2a5-be3c-7638-9c97-349f56cc949b",
+          "point": "5.1k 南湖登山口",
+          "arrive": "11:40",
+          "rest": 0,
+          "depart": "11:40",
+          "duration": 10,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#904b0e",
+        "isClick": true,
+        "friend": {}
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-20",
+          "id": "0199f2a5-c44f-773a-adbe-2bbb56447e46",
+          "point": "勝光山",
+          "arrive": "11:50",
+          "rest": 30,
+          "depart": "12:20",
+          "duration": 50,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#967331",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-20",
+            "id": "0199f2a9-9dc8-748a-b5b0-b072ee4b42c3",
+            "point": "勝光山",
+            "arrive": "12:12",
+            "rest": 0,
+            "depart": "12:12",
+            "duration": 48,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-20",
+            "id": "0199f2af-548a-7156-831c-6aee5ffc9cd4",
+            "point": "勝光山",
+            "arrive": "11:31",
+            "rest": 0,
+            "depart": "11:31",
+            "duration": 41,
+            "note": "",
+            "compareDetail": ""
+          }
+        }
+      },
+      {
+        "mainRecord": {
+          "date": "2025-10-20",
+          "id": "0199f2a5-c5a4-7071-9996-3586530943bb",
+          "point": "勝光山登山口",
+          "arrive": "13:10",
+          "rest": 0,
+          "depart": "13:10",
+          "duration": 30,
+          "note": "",
+          "compareDetail": ""
+        },
+        "color": "#8a2e31",
+        "isClick": true,
+        "friend": {
+          "0199f2bd-2eff-741f-b6ba-801c6de283c5": {
+            "date": "2025-10-20",
+            "id": "0199f2a9-9eef-70cc-af65-2819e71fd014",
+            "point": "勝光登山口",
+            "arrive": "13:00",
+            "rest": 0,
+            "depart": "13:00",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-fdbb-7058-aea7-c36366934b51": {
+            "date": "2025-10-20",
+            "id": "0199f2af-7d69-76ce-a263-b5c5fcc70488",
+            "point": "勝光登山口",
+            "arrive": "12:12",
+            "rest": 0,
+            "depart": "12:12",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2bc-ba3b-74d4-9e8f-74eacf1c81f4": {
+            "date": "2025-10-19",
+            "id": "0199f2b4-bb48-753a-8c16-caa526eabbf0",
+            "point": "勝光登山口",
+            "arrive": "18:40",
+            "rest": 0,
+            "depart": "18:40",
+            "duration": 0,
+            "note": "",
+            "compareDetail": ""
+          },
+          "0199f2b8-b2fe-756f-80f9-8154ad30e863": {
+            "date": "2025-10-20",
+            "id": "0199f2b9-fa09-7018-bfaa-f1e2c208e684",
+            "point": "勝光登山口",
+            "arrive": "13:45",
+            "rest": 0,
+            "depart": "13:45",
+            "duration": 0,
             "note": "",
             "compareDetail": ""
           }

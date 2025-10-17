@@ -217,10 +217,6 @@ const RoutePlanPage = () => {
           </ul>
         )}
 
-        <div className="text-xs text-gray-500">
-          提示：每份行程要比較的紀錄點要盡量相同，不然無法成功比較（ex: 道路交界處統一是岔路口或登山口）
-        </div>
-
         {/* 表格內容 */}
         <div className="w-full px-10">
           <RouteTable data={routes} setData={setRoutes} activeTab={activeTab} />
