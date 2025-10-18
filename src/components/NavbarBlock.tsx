@@ -11,7 +11,7 @@ export default function NavBarBlock() {
     ];
 
     return (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex justify-around w-[90%] max-w-md bg-white/80 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-lg px-4 py-2">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex justify-around w-[90%] max-w-md bg-white/80 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-lg px-4 py-2 z-50">
             {tabs.map((tab) => (
                 <NavLink
                     key={tab.to}

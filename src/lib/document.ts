@@ -257,14 +257,22 @@ export default function generateDocument(routes: Route[], routesCompare: dayTabl
                     ["", "本隊行程", ...routes.slice(1).map((_, idx) => `參考行程${numberToChinese(idx + 1)}`)],
                     ["人數", ...routes.map(r => r.teamSize.toString())],
                     ["天氣", ...routes.map(r => r.weather)],
-                    ...data.dayPoints.flatMap((p) => [
+                    ...data.dayPoints.flatMap((p, dayIdx) => [
                         [p.point, ...p.routes.map((r, idx) => {
                             if (!r) return "";
                             if (r.id === routes[idx].days[r.date][0].id) return r.depart || "";
-                            if (r.arrive && r.rest > 0) return `${r.arrive}(休息${r.rest}')`;
+                            if (r.arrive && r.rest > 0) {
+                                if (data.dayPoints.length - 1 === dayIdx) return `${r.arrive}`;
+                                return `${r.arrive}(休息${r.rest}')`
+                            };
                             return r.arrive || "";
                         })],
-                        ["", ...p.routes.map((r) => (r ? `${r.duration.toString()}'` : ""))],
+                        ["", ...p.routes.map((r, idx) => {
+                            if (!r) return "";
+                            const dayRecordLength = routes[idx].days[r.date].length;
+                            if (r.id === routes[idx].days[r.date][dayRecordLength - 1].id) return "";
+                            return `${r.duration.toString()}'`;
+                        })],
                     ])
                 ];
                 tableData.pop();
