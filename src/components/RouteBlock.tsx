@@ -31,10 +31,10 @@ const RouteBlock = ({ route, dayIdx, children }: RouteBlockProps) => {
     }
     const getTag = (record: RecordPoint) => {
         const tags = [];
-        for (let mapping of routesMapping.mapping) {
+        for (const mapping of routesMapping.mapping) {
             if (mapping.friend[route.id]?.id === record.id) {
                 let dayIdx = 1;
-                for (let [_, dayRecord] of Object.entries(routes[0].days)) {
+                for (const [, dayRecord] of Object.entries(routes[0].days)) {
                     const pointIdx = dayRecord.findIndex(r => mapping?.mainRecord.id === r.id);
                     if (pointIdx !== -1) tags.push(`${dayIdx}-${pointIdx + 1}`);
                     dayIdx++;

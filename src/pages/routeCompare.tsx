@@ -50,9 +50,6 @@ const EditableCell = ({
         function handleMouseDownOutside(e: MouseEvent) {
             if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
                 onBlur(e);
-                useEffect(() => {
-                    
-                }, []);
             }
         }
         document.addEventListener("mousedown", handleMouseDownOutside);
@@ -275,13 +272,13 @@ const RouteComparePage = () => {
                         <table
                             className="min-w-full table-fixed border-collapse border border-gray-200 text-sm overflow-visible"
                             style={{ tableLayout: "fixed", width: "100%" }}
-                            >
-                                <colgroup>
-                                    <col className="w-[15%]" />
-                                    {data.map((_, idx) => (
-                                        <col key={idx} style={{ width: `${85 / data.length}%` }} />
-                                    ))}
-                                </colgroup>
+                        >
+                            <colgroup>
+                                <col className="w-[15%]" />
+                                {data.map((_, idx) => (
+                                    <col key={idx} style={{ width: `${85 / data.length}%` }} />
+                                ))}
+                            </colgroup>
                             <thead className="bg-gray-100 text-gray-700">
                                 <tr>
                                     <th className="px-4 py-2 border">紀錄點</th>
@@ -318,9 +315,9 @@ const RouteComparePage = () => {
                                                     className={`px-4 py-2 cursor-pointer w-[250px] relative ${route &&
                                                             isEditing(route.routeId, route.id) &&
                                                             !editing?.isDuration
-                                                            ? "border-blue-500 border-2"
-                                                            : "border"
-                                                        }`}
+                                                        ? "border-blue-500 border-2"
+                                                        : "border"
+                                                    }`}
                                                     onClick={() => {
                                                         editHandler(
                                                             route
@@ -345,10 +342,10 @@ const RouteComparePage = () => {
                                                             <div className="space-y-1">
                                                                 <div
                                                                     title={`抵達時間 ${rowIdx === 0 ? route.depart : route.arrive
-                                                                        }${rowIdx !== 0 && route.rest > 0
-                                                                            ? ` 休 ${route.rest}'`
-                                                                            : ""
-                                                                        }`}
+                                                                    }${rowIdx !== 0 && route.rest > 0
+                                                                        ? ` 休 ${route.rest}'`
+                                                                        : ""
+                                                                    }`}
                                                                 >
                                                                     {checkFirstPoint(route.id, routeIdx, route.date) || rowIdx === 0 ? route.depart : route.arrive}{" "}
                                                                     {rowIdx !== 0 &&
@@ -361,34 +358,34 @@ const RouteComparePage = () => {
                                                             <AnimatePresence>
                                                                 {!editing?.isDuration &&
                                                                     isEditing(route?.routeId, route?.id) && (
-                                                                        <EditableCell
-                                                                            arrive={
-                                                                                rowIdx !== 0 ? route.arrive : undefined
-                                                                            }
-                                                                            depart={
-                                                                                rowIdx === 0 ? route.depart : undefined
-                                                                            }
-                                                                            rest={
-                                                                                rowIdx !==
+                                                                    <EditableCell
+                                                                        arrive={
+                                                                            rowIdx !== 0 ? route.arrive : undefined
+                                                                        }
+                                                                        depart={
+                                                                            rowIdx === 0 ? route.depart : undefined
+                                                                        }
+                                                                        rest={
+                                                                            rowIdx !==
                                                                                     dayTablesData[activeTab].dayPoints
                                                                                         .length -
                                                                                     1 && rowIdx !== 0
-                                                                                    ? route.rest
-                                                                                    : undefined
-                                                                            }
-                                                                            style={{
-                                                                                position: "absolute",
-                                                                                top: "100%",
-                                                                                left: 0,
-                                                                                width: "100%",
-                                                                            }}
-                                                                            compareDetail={route.compareDetail}
-                                                                            onChange={(res) =>
-                                                                                saveRoutes({ [res.field]: res.value })
-                                                                            }
-                                                                            onBlur={(e) => closeHandler(e)}
-                                                                        />
-                                                                    )}
+                                                                                ? route.rest
+                                                                                : undefined
+                                                                        }
+                                                                        style={{
+                                                                            position: "absolute",
+                                                                            top: "100%",
+                                                                            left: 0,
+                                                                            width: "100%",
+                                                                        }}
+                                                                        compareDetail={route.compareDetail}
+                                                                        onChange={(res) =>
+                                                                            saveRoutes({ [res.field]: res.value })
+                                                                        }
+                                                                        onBlur={(e) => closeHandler(e)}
+                                                                    />
+                                                                )}
                                                             </AnimatePresence>
                                                         </>
                                                     ) : (
@@ -400,67 +397,67 @@ const RouteComparePage = () => {
 
                                         {rowIdx !==
                                             dayTablesData[activeTab].dayPoints.length - 1 && (
-                                                <tr className="hover:bg-gray-200">
-                                                    <td className="px-4 py-2 border text-xs"></td>
-                                                    {row.routes.map((route, routeIdx) => (
-                                                        <td
-                                                            data-type="content"
-                                                            key={routeIdx}
-                                                            className={`px-4 py-2 border cursor-pointer relative ${route &&
+                                            <tr className="hover:bg-gray-200">
+                                                <td className="px-4 py-2 border text-xs"></td>
+                                                {row.routes.map((route, routeIdx) => (
+                                                    <td
+                                                        data-type="content"
+                                                        key={routeIdx}
+                                                        className={`px-4 py-2 border cursor-pointer relative ${route &&
                                                                     isEditing(route.routeId, route.id) &&
                                                                     editing?.isDuration
-                                                                    ? "border-blue-500 border-2"
-                                                                    : "border"
-                                                                }`}
-                                                            onClick={() => {
-                                                                editHandler(
-                                                                    route
-                                                                        ? {
-                                                                            isDuration: true,
-                                                                            date: route.date,
-                                                                            routeId: route.routeId,
-                                                                            pointId: route.id,
-                                                                        }
-                                                                        : null
-                                                                );
-                                                            }}
-                                                        >
-                                                            {(route && !checkLastPoint(route.id, routeIdx, route.date)) ? (
-                                                                <>
-                                                                    <div className="space-y-1">
-                                                                        <div>
-                                                                            {route.duration}
-                                                                            {"'"}
-                                                                        </div>
+                                                            ? "border-blue-500 border-2"
+                                                            : "border"
+                                                        }`}
+                                                        onClick={() => {
+                                                            editHandler(
+                                                                route
+                                                                    ? {
+                                                                        isDuration: true,
+                                                                        date: route.date,
+                                                                        routeId: route.routeId,
+                                                                        pointId: route.id,
+                                                                    }
+                                                                    : null
+                                                            );
+                                                        }}
+                                                    >
+                                                        {(route && !checkLastPoint(route.id, routeIdx, route.date)) ? (
+                                                            <>
+                                                                <div className="space-y-1">
+                                                                    <div>
+                                                                        {route.duration}
+                                                                        {"'"}
                                                                     </div>
-                                                                    <AnimatePresence>
-                                                                        {editing?.isDuration &&
-                                                                            isEditing(route?.routeId, route?.id) && (
-                                                                                <EditableCell
-                                                                                    duration={route.duration}
-                                                                                    style={{
-                                                                                        position: "absolute",
-                                                                                        top: "100%",
-                                                                                        left: 0,
-                                                                                        width: "100%",
-                                                                                    }}
-                                                                                    onChange={(res) =>
-                                                                                        saveRoutes({
-                                                                                            [res.field]: res.value,
-                                                                                        })
-                                                                                    }
-                                                                                    onBlur={(e) => closeHandler(e)}
-                                                                                />
-                                                                            )}
-                                                                    </AnimatePresence>
-                                                                </>
-                                                            ) : (
-                                                                <span className="text-gray-400">—</span>
-                                                            )}
-                                                        </td>
-                                                    ))}
-                                                </tr>
-                                            )}
+                                                                </div>
+                                                                <AnimatePresence>
+                                                                    {editing?.isDuration &&
+                                                                        isEditing(route?.routeId, route?.id) && (
+                                                                        <EditableCell
+                                                                            duration={route.duration}
+                                                                            style={{
+                                                                                position: "absolute",
+                                                                                top: "100%",
+                                                                                left: 0,
+                                                                                width: "100%",
+                                                                            }}
+                                                                            onChange={(res) =>
+                                                                                saveRoutes({
+                                                                                    [res.field]: res.value,
+                                                                                })
+                                                                            }
+                                                                            onBlur={(e) => closeHandler(e)}
+                                                                        />
+                                                                    )}
+                                                                </AnimatePresence>
+                                                            </>
+                                                        ) : (
+                                                            <span className="text-gray-400">—</span>
+                                                        )}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        )}
                                     </React.Fragment>
                                 ))}
                             </tbody>

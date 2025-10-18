@@ -22,22 +22,22 @@ export function randomHexColor(luminosity: Luminosity = "any"): string {
     let s: number, l: number;
 
     switch (luminosity) {
-        case "bright":
-            s = rand(70, 100);
-            l = rand(45, 65);
-            break;
-        case "dark":
-            s = rand(50, 90);
-            l = rand(20, 40);
-            break;
-        case "pastel":
-            s = rand(40, 70);
-            l = rand(70, 85);
-            break;
-        default:
-            s = rand(40, 100);
-            l = rand(30, 80);
-            break;
+    case "bright":
+        s = rand(70, 100);
+        l = rand(45, 65);
+        break;
+    case "dark":
+        s = rand(50, 90);
+        l = rand(20, 40);
+        break;
+    case "pastel":
+        s = rand(40, 70);
+        l = rand(70, 85);
+        break;
+    default:
+        s = rand(40, 100);
+        l = rand(30, 80);
+        break;
     }
 
     return hslToHex(h, s, l);

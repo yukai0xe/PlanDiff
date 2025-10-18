@@ -30,22 +30,22 @@ const FunctionalDialog = () => {
 
         const reader = new FileReader();
         reader.onload = (event) => {
-        try {
-            const text = event.target?.result as string;
-            const json: {routes: Route[], routesMapping: RoutesMapping} = JSON.parse(text);
-            if (json.routes) {
-                setRoutes(json.routes);
-                setRoutesMapping(json.routesMapping);
-                toast.success("匯入成功");
-            } else {
-                toast.error("格式錯誤");
+            try {
+                const text = event.target?.result as string;
+                const json: {routes: Route[], routesMapping: RoutesMapping} = JSON.parse(text);
+                if (json.routes) {
+                    setRoutes(json.routes);
+                    setRoutesMapping(json.routesMapping);
+                    toast.success("匯入成功");
+                } else {
+                    toast.error("格式錯誤");
+                }
+            } catch (err) {
+                if (err instanceof Error) toast.error("讀取或解析失敗：" + err.message);
+                else toast.error("讀取或解析失敗：未知錯誤");
+            } finally {
+                setShowBtn(false);
             }
-        } catch (err) {
-            if (err instanceof Error) toast.error("讀取或解析失敗：" + err.message);
-            else toast.error("讀取或解析失敗：未知錯誤");
-        } finally {
-            setShowBtn(false);
-        }
         };
         reader.readAsText(file);
     };
@@ -71,7 +71,7 @@ const FunctionalDialog = () => {
         <div className="relative" ref={popupRef}>
             <HiEllipsisHorizontal
                 className={`size-8 cursor-pointer hover:bg-gray-100 rounded ${showBtn && "bg-gray-200"
-                    }`}
+                }`}
                 onClick={() => setShowBtn(!showBtn)}
             />
             {showBtn && (

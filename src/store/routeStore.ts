@@ -163,27 +163,27 @@ export const useRouteStore = create<RouteStore>()(
                             } 
                             return null;
                         })
-                            // data.map((route, idx) => {
-                            // const currentRecord = Object.entries(route.days).flatMap(
-                            //     ([date, items]) => items.map((item) => ({ date, ...item }))
-                            // );
-                            // while (routeIdxs[idx] < currentRecord.length && routeIdxs[idx] - previousRouteIdxs[idx] < 3) {
-                            //     if (isSamePoint(currentRecord[routeIdxs[idx]].point, target.point)) {
-                            //         previousRouteIdxs[idx] = routeIdxs[idx] + 1;
-                            //         return {
-                            //             routeId: route.id,
-                            //             ...currentRecord[routeIdxs[idx]++],
-                            //         };
-                            //     }
-                            //     routeIdxs[idx]++;
-                            // }
-                            // routeIdxs[idx] = previousRouteIdxs[idx];
-                            // if (routeIdxs[idx] - 1 > 0 && isSamePoint(currentRecord[routeIdxs[idx] - 1].point, target.point)) {
-                            //     return {
-                            //         routeId: route.id,
-                            //         ...currentRecord[routeIdxs[idx] - 1],
-                            //     };
-                            // }
+                        // data.map((route, idx) => {
+                        // const currentRecord = Object.entries(route.days).flatMap(
+                        //     ([date, items]) => items.map((item) => ({ date, ...item }))
+                        // );
+                        // while (routeIdxs[idx] < currentRecord.length && routeIdxs[idx] - previousRouteIdxs[idx] < 3) {
+                        //     if (isSamePoint(currentRecord[routeIdxs[idx]].point, target.point)) {
+                        //         previousRouteIdxs[idx] = routeIdxs[idx] + 1;
+                        //         return {
+                        //             routeId: route.id,
+                        //             ...currentRecord[routeIdxs[idx]++],
+                        //         };
+                        //     }
+                        //     routeIdxs[idx]++;
+                        // }
+                        // routeIdxs[idx] = previousRouteIdxs[idx];
+                        // if (routeIdxs[idx] - 1 > 0 && isSamePoint(currentRecord[routeIdxs[idx] - 1].point, target.point)) {
+                        //     return {
+                        //         routeId: route.id,
+                        //         ...currentRecord[routeIdxs[idx] - 1],
+                        //     };
+                        // }
                     })),
                 })
             );
@@ -231,104 +231,104 @@ export const useRouteStore = create<RouteStore>()(
                         const newRows = rows.map((r,) => ({ ...r }));
                         const selectedRow = newRows[selectedRowIdx];
                         switch (field) {
-                            case "depart":
-                                if (typeof newValue === "string") {
-                                    const diff =
+                        case "depart":
+                            if (typeof newValue === "string") {
+                                const diff =
                                         timeToMinutes(newValue) -
                                         timeToMinutes(selectedRow.depart);
-                                    const startIdx = newRows.findIndex((r) => r.id === pointId);
-                                    for (let i = startIdx; i < n; i++) {
-                                        if (i === startIdx) {
-                                            newRows[i].rest = timeToMinutes(newValue) - timeToMinutes(newRows[i].arrive);
-                                        }
-                                        else {
-                                            newRows[i].arrive =
+                                const startIdx = newRows.findIndex((r) => r.id === pointId);
+                                for (let i = startIdx; i < n; i++) {
+                                    if (i === startIdx) {
+                                        newRows[i].rest = timeToMinutes(newValue) - timeToMinutes(newRows[i].arrive);
+                                    }
+                                    else {
+                                        newRows[i].arrive =
                                                 newRows[i].arrive.length > 0
                                                     ? minutesToTime(timeToMinutes(newRows[i].arrive) + diff)
                                                     : newValue;
-                                        }
-                                        newRows[i].depart =
-                                            newRows[i].depart.length > 0
-                                            ? minutesToTime(timeToMinutes(newRows[i].depart) + diff)
-                                                : newValue;
                                     }
+                                    newRows[i].depart =
+                                            newRows[i].depart.length > 0
+                                                ? minutesToTime(timeToMinutes(newRows[i].depart) + diff)
+                                                : newValue;
                                 }
-                                break;
-                            case "arrive":
-                                if (typeof newValue === "string") {
-                                    const diff =
+                            }
+                            break;
+                        case "arrive":
+                            if (typeof newValue === "string") {
+                                const diff =
                                         timeToMinutes(newValue) -
                                         timeToMinutes(selectedRow.arrive);
-                                    const startIdx = newRows.findIndex((r) => r.id === pointId);
-                                    for (let i = startIdx - 1; i < n; i++) {
-                                        if (i === startIdx - 1) {
-                                            newRows[i].duration = timeToMinutes(newValue) - timeToMinutes(newRows[i].depart);
-                                        }
-                                        else {
-                                            newRows[i].arrive =
+                                const startIdx = newRows.findIndex((r) => r.id === pointId);
+                                for (let i = startIdx - 1; i < n; i++) {
+                                    if (i === startIdx - 1) {
+                                        newRows[i].duration = timeToMinutes(newValue) - timeToMinutes(newRows[i].depart);
+                                    }
+                                    else {
+                                        newRows[i].arrive =
                                                 newRows[i].arrive.length > 0
                                                     ? minutesToTime(timeToMinutes(newRows[i].arrive) + diff)
                                                     : newValue;
-                                            newRows[i].depart =
+                                        newRows[i].depart =
                                                 newRows[i].depart.length > 0
                                                     ? minutesToTime(timeToMinutes(newRows[i].depart) + diff)
                                                     : newValue;
-                                        }
                                     }
                                 }
-                                break;
-                            case "duration":
-                                if (!isNaN(Number(newValue))) {
-                                    const delta = Number(newValue) - selectedRow.duration;
-                                    for (let i = selectedRowIdx; i < n - 1; i++) {
-                                        if (i === selectedRowIdx)
-                                            newRows[i].duration += delta;
-                                        newRows[i + 1].arrive =
+                            }
+                            break;
+                        case "duration":
+                            if (!isNaN(Number(newValue))) {
+                                const delta = Number(newValue) - selectedRow.duration;
+                                for (let i = selectedRowIdx; i < n - 1; i++) {
+                                    if (i === selectedRowIdx)
+                                        newRows[i].duration += delta;
+                                    newRows[i + 1].arrive =
                                             newRows[i].depart.length > 0
                                                 ? minutesToTime(
                                                     timeToMinutes(newRows[i].depart) + newRows[i].duration)
                                                 : "";
-                                        newRows[i + 1].depart =
+                                    newRows[i + 1].depart =
                                             newRows[i + 1].arrive.length > 0
                                                 ? minutesToTime(
                                                     timeToMinutes(newRows[i + 1].arrive) +
                                                     newRows[i + 1].rest
                                                 )
                                                 : "";
-                                    }
                                 }
-                                break;
-                            case "rest":
-                                if (!isNaN(Number(newValue))) {
-                                    const delta = Number(newValue) - selectedRow.rest;
-                                    for (let i = selectedRowIdx; i < n - 1; i++) {
-                                        if (i === selectedRowIdx) newRows[i].rest += delta;
-                                        newRows[i].depart =
+                            }
+                            break;
+                        case "rest":
+                            if (!isNaN(Number(newValue))) {
+                                const delta = Number(newValue) - selectedRow.rest;
+                                for (let i = selectedRowIdx; i < n - 1; i++) {
+                                    if (i === selectedRowIdx) newRows[i].rest += delta;
+                                    newRows[i].depart =
                                             newRows[i].arrive.length > 0
                                                 ? minutesToTime(
                                                     timeToMinutes(newRows[i].arrive) +
                                                     newRows[i].rest
                                                 )
                                                 : "";
-                                        newRows[i + 1].arrive =
+                                    newRows[i + 1].arrive =
                                             newRows[i].depart.length > 0
                                                 ? minutesToTime(
                                                     timeToMinutes(newRows[i].depart) +
                                                     newRows[i].duration
                                                 )
                                                 : "";
-                                    }
                                 }
-                                break;
-                            case "point":
-                                selectedRow.point = newValue.toString();
-                                break;
-                            case "note":
-                                selectedRow.note = newValue.toString();
-                                break;
-                            case "compareDetail":
-                                selectedRow.compareDetail = newValue.toString();
-                                break;
+                            }
+                            break;
+                        case "point":
+                            selectedRow.point = newValue.toString();
+                            break;
+                        case "note":
+                            selectedRow.note = newValue.toString();
+                            break;
+                        case "compareDetail":
+                            selectedRow.compareDetail = newValue.toString();
+                            break;
                         }
                         newDays[d] = newRows;
                     }

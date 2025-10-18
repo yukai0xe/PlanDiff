@@ -50,7 +50,6 @@ const RouteTable: React.FC<{
         const route = { ...newData[activeTab] };
         const rows = [...(route.days[date] || [])];
         const lastRowIdx = rowIdx ?? rows.length - 1;
-        debugger;
         if (rows.length > 0) {
             const lastRow = data[activeTab].days[date][lastRowIdx];
             const time =
@@ -307,26 +306,26 @@ const RouteTable: React.FC<{
             }
 
             switch (e.key) {
-                case "ArrowUp":
-                    e.preventDefault();
-                    nextRow = (focus.rowIdx - 1 + row_count) % row_count;
-                    break;
-                case "ArrowDown":
-                    e.preventDefault();
-                    nextRow = (focus.rowIdx + 1) % row_count;
-                    break;
-                case "ArrowLeft": {
-                    e.preventDefault();
-                    const idx = fields.indexOf(focus.field);
-                    nextField = fields[(idx - 1 + fields.length) % fields.length];
-                    break;
-                }
-                case "ArrowRight": {
-                    e.preventDefault();
-                    const idx = fields.indexOf(focus.field);
-                    nextField = fields[(idx + 1) % fields.length];
-                    break;
-                }
+            case "ArrowUp":
+                e.preventDefault();
+                nextRow = (focus.rowIdx - 1 + row_count) % row_count;
+                break;
+            case "ArrowDown":
+                e.preventDefault();
+                nextRow = (focus.rowIdx + 1) % row_count;
+                break;
+            case "ArrowLeft": {
+                e.preventDefault();
+                const idx = fields.indexOf(focus.field);
+                nextField = fields[(idx - 1 + fields.length) % fields.length];
+                break;
+            }
+            case "ArrowRight": {
+                e.preventDefault();
+                const idx = fields.indexOf(focus.field);
+                nextField = fields[(idx + 1) % fields.length];
+                break;
+            }
             }
 
             setFocus({ ...focus, rowIdx: nextRow, field: nextField });
@@ -446,75 +445,54 @@ const RouteTable: React.FC<{
                                     const isFocusedRow =
                                         focus && focus.date === date && focus.rowIdx === rowIdx;
                                     return (
-                                    <tr
-                                        key={row.id}
-                                        className={`relative hover:bg-gray-200 transition-colors ${isFocusedRow ? "bg-blue-50" : ""}`}
-                                    >
+                                        <tr
+                                            key={row.id}
+                                            className={`relative hover:bg-gray-200 transition-colors ${isFocusedRow ? "bg-blue-50" : ""}`}
+                                        >
                                             {fields.map((field) => {
-                                            const key = `${date}-${rowIdx}-${field}`;
-                                            const isStrike =
+                                                const key = `${date}-${rowIdx}-${field}`;
+                                                const isStrike =
                                                 (rowIdx === 0 &&
                                                     (field === "arrive" || field === "rest")) ||
                                                 (rowIdx === rows.length - 1 &&
                                                     (field === "depart" ||
                                                         field === "rest" ||
                                                         field === "duration"));
-                                            if (isStrike) {
+                                                if (isStrike) {
+                                                    return (
+                                                        <td
+                                                            key={date + "-" + field}
+                                                            className={`px-4 py-2 border cursor-pointer h-[35px] relative border`}
+                                                            onClick={() => {
+                                                                setEditing(null);
+                                                                setFocus(null);
+                                                            }}
+                                                        >
+                                                            x
+                                                        </td>
+                                                    );
+                                                }
                                                 return (
                                                     <td
-                                                        key={date + "-" + field}
-                                                        className={`px-4 py-2 border cursor-pointer h-[35px] relative border`}
-                                                        onClick={() => {
-                                                            setEditing(null);
-                                                            setFocus(null);
-                                                        }}
-                                                    >
-                                                        x
-                                                    </td>
-                                                );
-                                            }
-                                            return (
-                                                <td
-                                                    key={key}
-                                                    ref={(el) => { cellRefs.current[key] = el }}
-                                                    className={`px-4 py-2 cursor-pointer h-[35px] select-text scroll-m-5
+                                                        key={key}
+                                                        ref={(el) => { cellRefs.current[key] = el }}
+                                                        className={`px-4 py-2 cursor-pointer h-[35px] select-text scroll-m-5
                                                         ${checkFocus(rowIdx, field, date) ? "border-blue-500 border-2" : "border"}
                                                         ${checkEditingEffectCell(date, rowIdx, field) ? "bg-green-300" :
-                                                            (["duration", "rest"].includes(field) && Number(row[field] ?? 0) < 0) ? "bg-red-300 text-stone-950 font-bold" : ""}`
-                                                    }
-                                                    onDoubleClick={() => {
-                                                        if (
-                                                            editing !== null &&
-                                                            prevValue.toString().length > 0
-                                                        ) {
-                                                            handleTimeChange(editing, prevValue);
+                                                        (["duration", "rest"].includes(field) && Number(row[field] ?? 0) < 0) ? "bg-red-300 text-stone-950 font-bold" : ""}`
                                                         }
-                                                        setFocus({
-                                                            rowIdx,
-                                                            field,
-                                                            date,
-                                                        });
-                                                        setEditing({
-                                                            pointId: row.id,
-                                                            routeId: data[activeTab].id,
-                                                            field,
-                                                            date,
-                                                            idx: rowIdx
-                                                        });
-                                                        setPrevValue(row[field]);
-                                                    }}
-                                                    onMouseDown={(e) => {
-                                                        if (e.detail === 2) return;
-                                                        if (
-                                                            editing !== null &&
+                                                        onDoubleClick={() => {
+                                                            if (
+                                                                editing !== null &&
                                                             prevValue.toString().length > 0
-                                                        ) {
-                                                            handleTimeChange(editing, prevValue);
-                                                        }
-                                                        if (
-                                                            checkFocus(rowIdx, field, date) &&
-                                                            editing === null
-                                                        ) {
+                                                            ) {
+                                                                handleTimeChange(editing, prevValue);
+                                                            }
+                                                            setFocus({
+                                                                rowIdx,
+                                                                field,
+                                                                date,
+                                                            });
                                                             setEditing({
                                                                 pointId: row.id,
                                                                 routeId: data[activeTab].id,
@@ -523,53 +501,74 @@ const RouteTable: React.FC<{
                                                                 idx: rowIdx
                                                             });
                                                             setPrevValue(row[field]);
-                                                        } else {
-                                                            setEditing(null);
-                                                            setFocus({ rowIdx, field, date });
-                                                        }
-                                                    }}
-                                                    onBlur={() => {
-                                                        if (
-                                                            editing !== null &&
+                                                        }}
+                                                        onMouseDown={(e) => {
+                                                            if (e.detail === 2) return;
+                                                            if (
+                                                                editing !== null &&
                                                             prevValue.toString().length > 0
-                                                        ) {
-                                                            handleTimeChange(editing, prevValue);
-                                                        }
-                                                    }}
-                                                >
-                                                    {checkEditing(row.id, field, date) ? (
-                                                        <input
-                                                            ref={inputRef}
-                                                            type="text"
-                                                            autoFocus
-                                                            value={prevValue}
-                                                            onChange={(e) =>
-                                                                setPrevValue(e.currentTarget.value)
+                                                            ) {
+                                                                handleTimeChange(editing, prevValue);
                                                             }
-                                                            onKeyDown={(e) => {
-                                                                if (e.key === "Enter") {
-                                                                    e.preventDefault();
-                                                                    if (inputRef.current && editing) {
-                                                                        handleTimeChange(editing, inputRef.current.value);
+                                                            if (
+                                                                checkFocus(rowIdx, field, date) &&
+                                                            editing === null
+                                                            ) {
+                                                                setEditing({
+                                                                    pointId: row.id,
+                                                                    routeId: data[activeTab].id,
+                                                                    field,
+                                                                    date,
+                                                                    idx: rowIdx
+                                                                });
+                                                                setPrevValue(row[field]);
+                                                            } else {
+                                                                setEditing(null);
+                                                                setFocus({ rowIdx, field, date });
+                                                            }
+                                                        }}
+                                                        onBlur={() => {
+                                                            if (
+                                                                editing !== null &&
+                                                            prevValue.toString().length > 0
+                                                            ) {
+                                                                handleTimeChange(editing, prevValue);
+                                                            }
+                                                        }}
+                                                    >
+                                                        {checkEditing(row.id, field, date) ? (
+                                                            <input
+                                                                ref={inputRef}
+                                                                type="text"
+                                                                autoFocus
+                                                                value={prevValue}
+                                                                onChange={(e) =>
+                                                                    setPrevValue(e.currentTarget.value)
+                                                                }
+                                                                onKeyDown={(e) => {
+                                                                    if (e.key === "Enter") {
+                                                                        e.preventDefault();
+                                                                        if (inputRef.current && editing) {
+                                                                            handleTimeChange(editing, inputRef.current.value);
+                                                                            setEditing(null);
+                                                                        }
+                                                                    }
+                                                                    if (e.key === "Escape") {
+                                                                        e.preventDefault();
                                                                         setEditing(null);
                                                                     }
-                                                                }
-                                                                if (e.key === "Escape") {
-                                                                    e.preventDefault();
-                                                                    setEditing(null);
-                                                                }
-                                                            }}
-                                                            className="w-full h-full bg-transparent border-none outline-none px-0 py-0 text-sm"
-                                                        />
-                                                    ) : (
-                                                        row[field]
-                                                    )}
-                                                </td>
-                                            );
-                                        })}
-                                    </tr>
+                                                                }}
+                                                                className="w-full h-full bg-transparent border-none outline-none px-0 py-0 text-sm"
+                                                            />
+                                                        ) : (
+                                                            row[field]
+                                                        )}
+                                                    </td>
+                                                );
+                                            })}
+                                        </tr>
+                                    )}
                                 )}
-                            )}
                             </tbody>
                         </table>
                     </div>
