@@ -2,10 +2,9 @@ import RouteInfoDialog from "@/components/RouteInfoDialog";
 import FunctionalDialog from "@/components/FunctionalDialog";
 import TabsSelector from "@/components/TabsSelector";
 import Selector from "@/components/Selector";
-import RouteTable from "@/components/Table";
+import RouteTable from "@/components/RouteTable";
 import { numberToChinese } from "@/lib/utility";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useRouteStore } from "@/store/routeStore";
 import { getEmptyDateRoute, routeDataMapping } from "@/data/routeData";
 import { v7 as uuidv7 } from "uuid";
@@ -15,7 +14,6 @@ const RoutePlanPage = () => {
   const { setRoutes, setRoutesMapping, routes} = useRouteStore();
   const [tabs, setTabs] = useState(["預計行程"]);
   const [activeTab, setActiveTab] = useState<number>(0);
-  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   
@@ -90,7 +88,7 @@ const RoutePlanPage = () => {
     weather: string,
     source: string
   }) => {
-    if (activeTab < routes.length) {
+    if (activeTab <= routes.length) {
       newRoutes[activeTab].teamSize = Number(teamSize);
       newRoutes[activeTab].weather = weather;
       newRoutes[activeTab].source = source;
@@ -170,7 +168,8 @@ const RoutePlanPage = () => {
     <div className="min-h-screen w-full bg-gradient-to-b from-gray-50 to-white p-6 shadow-2xl">
         {/* Tab 切換列 */}
         <div className="flex pb-4 justify-between items-center">
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
+            <h1 className="text-2xl font-bold">詳細行程內容</h1>
             <button
               onClick={() => openModal()}
               className="px-6 py-2 rounded-2xl bg-yellow-400 text-stone-700 hover:bg-yellow-500 text-sm"
@@ -187,12 +186,6 @@ const RoutePlanPage = () => {
           </div>
           <div className="flex gap-x-2 items-center">
             <Selector tabs={Object.keys(routeDataMapping)} label={"載入範例行程"} onChange={loadExampleData} />
-            <button
-              className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
-              onClick={() => navigate("/mapping")}
-            >
-              行程比較
-            </button>
             {activeTab !== 0 && (
               <button
                 className="px-4 py-2 rounded bg-red-500 text-gray-50 hover:bg-red-600 transition"
@@ -208,9 +201,9 @@ const RoutePlanPage = () => {
           <ul className="mb-2 flex flex-col gap-y-1">
             <li>隊伍人數：{routes[activeTab].teamSize}</li>
             {activeTab !== 0 && (
-              <>
+              <>  
                 <li>天氣：{routes[activeTab].weather}</li>
-                <li>資料來源：<a className="inline-block text-blue-600 underline hover:text-blue-800"
+                <li>資料來源：<a className="inline-block text-blue-600 underline hover:text-blue-800" target="_blank"
                   href={routes[activeTab].source}>{routes[activeTab].source}</a></li>
               </>
             )}

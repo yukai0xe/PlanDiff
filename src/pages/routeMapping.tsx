@@ -2,7 +2,6 @@ import FunctionalDialog from "@/components/FunctionalDialog";
 import TabsSelector from "@/components/TabsSelector";
 import RouteBlock from "@/components/RouteBlock";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { useRouteStore } from "@/store/routeStore";
 import { numberToChinese } from "@/lib/utility";
 import Selector from "@/components/Selector";
@@ -13,7 +12,6 @@ const RouteMappingPage = () => {
     const [dayTabs, setDayTabs] = useState<string[]>([""]);
     const [routeTabs, setRoutesTabs] = useState<string[]>([]);
     const [activeTab, setActiveTab] = useState<number>(0);
-    const navigate = useNavigate();
 
     const handleChangeRoute = (route: string, idx: number) => {
         const newRouteView = routeView.map((r, rIdx) => {
@@ -38,15 +36,11 @@ const RouteMappingPage = () => {
     return (
         <div className="min-h-screen w-full bg-gradient-to-b from-gray-50 to-white p-6 shadow-2xl">
             <div className="flex pb-4 justify-between items-center">
-
-                <TabsSelector activeTab={activeTab} setActiveTab={setActiveTab} tabs={dayTabs} />
-                <div className="flex gap-x-2 items-center">
-                    <button
-                        className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
-                        onClick={() => navigate("/compare")}
-                    >
-                        查看比較結果
-                    </button>
+                <div className="flex gap-x-5 items-center">
+                    <h1 className="text-2xl font-bold">連結預計行程與參考行程</h1>
+                    <TabsSelector activeTab={activeTab} setActiveTab={setActiveTab} tabs={dayTabs} />
+                </div>
+                <div className="">
                     <FunctionalDialog />
                 </div>
             </div>

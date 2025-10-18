@@ -503,7 +503,7 @@ const RouteTable: React.FC<{
                                                         });
                                                         setPrevValue(row[field]);
                                                     }}
-                                                    onClick={(e) => {
+                                                    onMouseDown={(e) => {
                                                         if (e.detail === 2) return;
                                                         if (
                                                             editing !== null &&

@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import FunctionalDialog from "@/components/FunctionalDialog";
 import TabsSelector from "@/components/TabsSelector";
-import { useNavigate } from "react-router-dom";
 import { useRouteStore } from "@/store/routeStore";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -196,7 +195,6 @@ const RouteComparePage = () => {
     const dayTablesData = useRouteStore((state) => state.routesCompare);
     const [tabs, setTabs] = useState([""]);
     const [activeTab, setActiveTab] = useState(0);
-    const navigate = useNavigate();
     const [editing, setEditing] = useState<EditableCell | null>(null);
 
     const isEditing = (routeId?: string, pointId?: string) => {
@@ -263,10 +261,6 @@ const RouteComparePage = () => {
                     <TabsSelector tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
                 </div>
                 <div className="flex gap-x-2 items-center">
-                    <button className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
-                        onClick={() => navigate("/mapping")}>調整行程比較</button>
-                    <button className="px-4 py-2 rounded bg-amber-200 text-gray-800 hover:bg-amber-300"
-                        onClick={() => navigate("/")}>返回行程總覽</button>
                     <FunctionalDialog />
                 </div>
             </div>

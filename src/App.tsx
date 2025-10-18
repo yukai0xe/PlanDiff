@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RouteComparePage from "./pages/routeCompare";
 import RouteOverviewPage from "./pages/routeOverview";
 import RouteMappingPage from "./pages/routeMapping";
+import NavBarBlock from "@/components/NavbarBlock";
 
 import { Toaster } from "react-hot-toast";
 import { useEffect } from "react";
@@ -31,7 +32,7 @@ function App() {
       <footer>
         © {new Date().getFullYear()} created by yukai0xe
       </footer>
-
+      <NavBarBlock />
       <Toaster
         toastOptions={{
           success: {
